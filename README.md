@@ -13,7 +13,7 @@
 ### Introduction
 
 
-### Objectve
+### Objective
 
 
 ### Features & Functionilities
