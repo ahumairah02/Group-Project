@@ -3,10 +3,10 @@
 |     NAME      |   MATRIC.NO   |     TASK      | 
 | ------------- | ------------- | ------------- |
 |1.             | Content Cell  |               |
-|2.Amir Mustaqim Bin Ismail  | 2218607 |               |
+|2. Amir Mustaqim Bin Ismail  | 2218607 |               |
 |3. Aisha Humairah binti Ahmad Adzuan  | 2219130  |        |
 |4. Siti Hajar 'Aainaa binti Hamid | 2218648  |        |
-|5.Musanna Sarder Abdullah          | 2220429  |               |
+|5. Musanna Sarder Abdullah          | 2220429  |               |
         
 
 ### Title
