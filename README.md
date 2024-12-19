@@ -23,5 +23,8 @@
 
 ### ERD
 
+![ERD Diagram](![Database ER diagram (crow's foot)](https://github.com/user-attachments/assets/743dcf77-0106-4f6b-bb33-75e718645e08))
+
+
 
 ### Sequence Diagram
