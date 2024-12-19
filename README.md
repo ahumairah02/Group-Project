@@ -23,7 +23,7 @@
 
 ### ERD
 
-![ERD Diagram](![Database ER diagram (crow's foot)](https://github.com/user-attachments/assets/743dcf77-0106-4f6b-bb33-75e718645e08))
+![Database ER diagram (crow's foot) (1)](https://github.com/user-attachments/assets/928302b0-bd25-4f23-a905-005f7d495bbb)
 
 
 
