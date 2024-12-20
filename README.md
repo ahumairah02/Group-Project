@@ -13,6 +13,12 @@
 
 
 ### Introduction
+Traveling is a universal activity that bridges cultures, fosters understanding, and creates lasting memories. However, for Muslim travelers, finding accommodations, dining options, and prayer facilities that align with Islamic principles can be a significant challenge. The lack of easily accessible information on Shariah-compliant services often leads to inconvenience and limits their ability to enjoy travel experiences to the fullest.
+
+To address this gap, we propose the development of a Shariah-Compliant Travel Planner. It is a web-based platform designed to cater specifically to the needs of Muslim travelers. This platform will serve as a comprehensive guide, helping users identify halal-certified hotels and restaurants, locate prayer spaces and plan itineraries that respect their religious obligations.
+
+The Shariah-Compliant Travel Planner aims to simplify travel for the global Muslim community by integrating technology with faith-based travel requirements. By creating a seamless user experience that combines convenience and compliance, this project will contribute to the growing halal tourism market and promote inclusive travel solutions.
+
 
 
 ### Objective
