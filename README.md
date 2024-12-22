@@ -47,5 +47,5 @@ Awareness: Enhancing awareness of halal tourism services among service providers
 
 ### References
 
-1. GitHub Docs: Markdown Syntax Guide - [https://docs.github.com/en/get-started/writing-on-github/basic-writing-and-formatting-syntax](https://docs.github.com/en/get-started/writing-on-github/basic-writing-and-formatting-syntax)  
+1. GitHub Docs: Markdown Syntax Guide - [https://docs.github.com/en/get-started/writing-on-github/basic-writing-and-formatting-syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 2. Laravel Documentation - [https://laravel.com/docs](https://laravel.com/docs)  
