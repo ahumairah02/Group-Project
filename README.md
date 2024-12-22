@@ -44,19 +44,19 @@ a) Halal-Certified Hotel Finder
 -Include user ratings and reviews specific to halal compliance.  
 -Booking integration to reserve rooms directly through the platform.
 
-b) Halal Restaurant Locator
-**Description**: A tool to find restaurants serving halal food at destinations worldwide.
-**Functionalities**:
--Search by cuisine type, price range, or proximity to the user’s location.
--Display halal certifications and Muslim-owned restaurant indicators.
--Directions and opening hours integrated with maps.
+b) Halal Restaurant Locator  
+**Description**: A tool to find restaurants serving halal food at destinations worldwide.  
+**Functionalities**:  
+-Search by cuisine type, price range, or proximity to the user’s location.  
+-Display halal certifications and Muslim-owned restaurant indicators.  
+-Directions and opening hours integrated with maps.  
 -Feature user reviews emphasizing quality and adherence to halal standards.
 
-c) Prayer Space Locator
-**Description**: A map-based tool to identify nearby mosques or designated prayer rooms.
-**Functionalities**:
--Interactive map to locate mosques, prayer spaces, and even quiet public areas suitable for Salah.
--Salah timing notifications adjusted to the user’s location.
+c) Prayer Space Locator  
+**Description**: A map-based tool to identify nearby mosques or designated prayer rooms.  
+**Functionalities**:  
+-Interactive map to locate mosques, prayer spaces, and even quiet public areas suitable for Salah.  
+-Salah timing notifications adjusted to the user’s location.  
 -Integration with a Qibla direction compass and wudu facilities indicator.
 
 
