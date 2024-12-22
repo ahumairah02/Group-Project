@@ -36,12 +36,12 @@ Awareness: Enhancing awareness of halal tourism services among service providers
 
 ### Features & Functionilities
 
-a) Halal-Certified Hotel Finder
-**Description**: A centralized database of hotels that meet Shariah compliance.
-**Functionalities**:
--Search and filter hotels based on halal-certified kitchens, alcohol-free environments, and prayer facilities.
--Display halal certification and endorsements (e.g., from local Islamic authorities).
--Include user ratings and reviews specific to halal compliance.
+a) Halal-Certified Hotel Finder  
+**Description**: A centralized database of hotels that meet Shariah compliance.  
+**Functionalities**:  
+-Search and filter hotels based on halal-certified kitchens, alcohol-free environments, and prayer facilities.  
+-Display halal certification and endorsements (e.g., from local Islamic authorities).  
+-Include user ratings and reviews specific to halal compliance.  
 -Booking integration to reserve rooms directly through the platform.
 
 b) Halal Restaurant Locator
