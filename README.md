@@ -2,11 +2,11 @@
 ### Group Members
 |     NAME      |   MATRIC.NO   |     TASK      | 
 | ------------- | ------------- | ------------- |
-|1. Maria Wardah binti Mohd Ghazali | 2218014 | objectives |
-|2. Amir Mustaqim Bin Ismail  | 2218607 |features & functionalities  |
+|1. Maria Wardah binti Mohd Ghazali | 2218014 | Objectives |
+|2. Amir Mustaqim Bin Ismail  | 2218607 |  Features & Functionalities  |
 |3. Aisha Humairah binti Ahmad Adzuan  | 2219130  |  ERD   |
 |4. Siti Hajar 'Aainaa binti Hamid | 2218648  |    Title & Introduction    |
-|5. Musanna Sarder Abdullah          | 2220429  |               |
+|5. Musanna Sarder Abdullah          | 2220429  |   Sequence Diagram        |
         
 
 ### Title
