@@ -1,6 +1,6 @@
 # Group-Project
 ### Group Members
-|     NAME      |   MATRIC.NO   |     TASK      | 
+|     NAME      |   MATRIC NO.   |     TASK      | 
 | ------------- | ------------- | ------------- |
 |1. Maria Wardah binti Mohd Ghazali | 2218014 | Objectives |
 |2. Amir Mustaqim Bin Ismail  | 2218607 |  Features & Functionalities  |
