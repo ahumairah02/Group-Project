@@ -12,6 +12,8 @@
 ### Title
 Taqwa Travels
 
+
+
 ### Introduction
 Traveling is a universal activity that bridges cultures, fosters understanding, and creates lasting memories. However, for Muslim travelers, finding accommodations, dining options, and prayer facilities that align with Islamic principles can be a significant challenge. The lack of easily accessible information on Shariah-compliant services often leads to inconvenience and limits their ability to enjoy travel experiences to the fullest.
 
