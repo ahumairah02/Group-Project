@@ -36,7 +36,8 @@ The primary objective of the Shariah-Compliant Travel Planner is to provide a on
 
 ### Features & Functionilities
 
-a) Halal-Certified Hotel Finder  
+a) **Halal-Certified Hotel Finder**
+
 **Description**: A centralized database of hotels that meet Shariah compliance.  
 **Functionalities**:  
 - Search and filter hotels based on halal-certified kitchens, alcohol-free environments, and prayer facilities.  
@@ -44,7 +45,8 @@ a) Halal-Certified Hotel Finder
 - Include user ratings and reviews specific to halal compliance.  
 - Booking integration to reserve rooms directly through the platform.
 
-b) Halal Restaurant Locator  
+b) **Halal Restaurant Locator**
+
 **Description**: A tool to find restaurants serving halal food at destinations worldwide.  
 **Functionalities**:  
 - Search by cuisine type, price range, or proximity to the user’s location.  
@@ -52,14 +54,16 @@ b) Halal Restaurant Locator
 - Directions and opening hours integrated with maps.  
 - Feature user reviews emphasizing quality and adherence to halal standards.
 
-c) Prayer Space Locator  
+c) **Prayer Space Locator**
+
 **Description**: A map-based tool to identify nearby mosques or designated prayer rooms.  
 **Functionalities**:  
 - Interactive map to locate mosques, prayer spaces, and even quiet public areas suitable for Salah.  
 - Salah timing notifications adjusted to the user’s location.  
 - Integration with a Qibla direction compass and wudu facilities indicator.
 
-d) Shariah-Compliant Itinerary Planner  
+d) **Shariah-Compliant Itinerary Planner**
+
 **Description**: Enables users to create a personalized travel schedule while incorporating halal-friendly stops and prayer times.  
 **Functionalities**:  
 - Add halal hotels, restaurants, and prayer spaces to the itinerary.  
