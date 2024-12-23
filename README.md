@@ -62,7 +62,7 @@ c) **Prayer Space Locator**
 **Functionalities**:  
 - Interactive map to locate mosques, prayer spaces, and even quiet public areas suitable for Salah.  
 - Salah timing notifications adjusted to the user’s location.  
-- Integration with a Qibla direction compass and wudu facilities indicator.
+- Integration with a Qibla direction compass.
 
 
 ### ERD
