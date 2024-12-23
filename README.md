@@ -77,4 +77,4 @@ c) **Prayer Space Locator**
 
 1. GitHub Docs: Markdown Syntax Guide - [https://docs.github.com/en/get-started/writing-on-github/basic-writing-and-formatting-syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 2. Laravel Documentation - [https://laravel.com/docs](https://laravel.com/docs)  
-3. Muslim Pro App - [https://www.muslimpro.com/]
+3. Muslim Pro App - [https://www.muslimpro.com/](https://www.muslimpro.com/)
