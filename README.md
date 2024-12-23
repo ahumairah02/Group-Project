@@ -64,15 +64,6 @@ c) **Prayer Space Locator**
 - Salah timing notifications adjusted to the user’s location.  
 - Integration with a Qibla direction compass and wudu facilities indicator.
 
-d) **Shariah-Compliant Itinerary Planner**
-
-**Description**: Enables users to create a personalized travel schedule while incorporating halal-friendly stops and prayer times.  
-**Functionalities**:  
-- Add halal hotels, restaurants, and prayer spaces to the itinerary.  
-- Automatically include prayer times and location-based reminders into the plan.  
-- Shareable itineraries for group travel with family or friends.  
-
-
 
 ### ERD
 
