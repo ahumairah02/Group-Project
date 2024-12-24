@@ -45,17 +45,34 @@ a) **Halal-Certified Hotel Finder**
 - Search and filter hotels based on halal-certified kitchens, alcohol-free environments, and prayer facilities.  
 - Display halal certification and endorsements (e.g., from local Islamic authorities).  
 - Include user ratings and reviews specific to halal compliance.  
-- Booking integration to reserve rooms directly through the platform.
+- Booking integration to reserve rooms that link with Booking.com website.
 
 b) **Halal Restaurant Locator**
 
 **Description**: A tool to find restaurants serving halal food at destinations worldwide.  
 **Functionalities**:  
 - Search by cuisine type, price range, or proximity to the user’s location.  
-- Display halal certifications and Muslim-owned restaurant indicators.  
-- Directions and opening hours integrated with maps.  
-- Feature user reviews emphasizing quality and adherence to halal standards.
+- Display halal certifications and Muslim-owned restaurant indicators.
 
+c) **Travel Packages**
+
+**Description**: A Muslim-friendly travel packages that includes destinations, hotels, and activities.  
+**Functionalities**:
+- Users can search travel packages by destination, price range, duration, and type of travel.
+- Display the details on what the package covers and pricing per person.
+- Booking: Collect user details, number of travelers, and preferred dates.
+
+d)**Payment**
+**Description**: Handles booking payments securely, including payment status and history.
+**Functionalities**:
+- Support for multiple payment methods, including credit/debit cards, and e-wallets.
+- Instant email and SMS notifications with booking details and a payment receipt.
+-  Users can view their transaction details.
+
+e)**Login and User Management**
+**Description**: Includes user registration and login functionality.
+**Functionalities**:
+-User roles (admin vs. user) will determine access to different features
 
 ### ERD
 
