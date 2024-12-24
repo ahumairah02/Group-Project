@@ -85,7 +85,8 @@ e)**Login and User Management**
 ### Sequence Diagram
 
 
-![Sequence Diagram](https://github.com/user-attachments/assets/7e4b7012-6021-421d-9a90-39a07f0388c7)
+![SqD](https://github.com/user-attachments/assets/6258e527-a119-4f6a-8938-0c4a3d00b0da)
+
 
 ### References
 
