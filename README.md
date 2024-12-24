@@ -76,6 +76,7 @@ e)**Login and User Management**
 **Description**: Includes user registration and login functionality.
 
 **Functionalities**:
+
 -User roles (admin vs. user) will determine access to different features
 
 ### ERD
