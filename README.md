@@ -63,6 +63,7 @@ c) **Travel Packages**
 - Booking: Collect user details, number of travelers, and preferred dates.
 
 d)**Payment**
+
 **Description**: Handles booking payments securely, including payment status and history.
 **Functionalities**:
 - Support for multiple payment methods, including credit/debit cards, and e-wallets.
@@ -70,6 +71,7 @@ d)**Payment**
 -  Users can view their transaction details.
 
 e)**Login and User Management**
+
 **Description**: Includes user registration and login functionality.
 **Functionalities**:
 -User roles (admin vs. user) will determine access to different features
