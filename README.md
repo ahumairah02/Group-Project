@@ -56,14 +56,6 @@ b) **Halal Restaurant Locator**
 - Directions and opening hours integrated with maps.  
 - Feature user reviews emphasizing quality and adherence to halal standards.
 
-c) **Prayer Space Locator**
-
-**Description**: A map-based tool to identify nearby mosques or designated prayer rooms.  
-**Functionalities**:  
-- Interactive map to locate mosques, prayer spaces, and even quiet public areas suitable for Salah.  
-- Salah timing notifications adjusted to the user’s location.  
-- Integration with a Qibla direction compass.
-
 
 ### ERD
 
