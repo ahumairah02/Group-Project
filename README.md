@@ -65,6 +65,7 @@ c) **Travel Packages**
 d)**Payment**
 
 **Description**: Handles booking payments securely, including payment status and history.
+
 **Functionalities**:
 - Support for multiple payment methods, including credit/debit cards, and e-wallets.
 - Instant email and SMS notifications with booking details and a payment receipt.
@@ -73,6 +74,7 @@ d)**Payment**
 e)**Login and User Management**
 
 **Description**: Includes user registration and login functionality.
+
 **Functionalities**:
 -User roles (admin vs. user) will determine access to different features
 
