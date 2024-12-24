@@ -69,15 +69,14 @@ d)**Payment**
 **Functionalities**:
 - Support for multiple payment methods, including credit/debit cards, and e-wallets.
 - Instant email and SMS notifications with booking details and a payment receipt.
--  Users can view their transaction details.
+- Users can view their transaction details.
 
 e)**Login and User Management**
 
 **Description**: Includes user registration and login functionality.
 
 **Functionalities**:
-
--User roles (admin vs. user) will determine access to different features
+- User roles (admin vs. user) will determine access to different features.
 
 ### ERD
 
