@@ -84,6 +84,9 @@ e)**Login and User Management**
 
 ### Sequence Diagram
 
+
+![Sequence Diagram](https://github.com/user-attachments/assets/7e4b7012-6021-421d-9a90-39a07f0388c7)
+
 ### References
 
 1. GitHub Docs: Markdown Syntax Guide - [https://docs.github.com/en/get-started/writing-on-github/basic-writing-and-formatting-syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
