@@ -40,7 +40,7 @@ The primary objective of the Shariah-Compliant Travel Planner is to provide a on
 
 a) **Halal-Certified Hotel Finder**
 
-**Description**: A centralized database of hotels that meet Shariah compliance.  
+**Description**: A centralized database of hotels that meet Shariah compliance. 
 **Functionalities**:  
 - Search and filter hotels based on halal-certified kitchens, alcohol-free environments, and prayer facilities.  
 - Display halal certification and endorsements (e.g., from local Islamic authorities).  
@@ -64,17 +64,15 @@ c) **Travel Packages**
 
 d)**Payment**
 
-**Description**: Handles booking payments securely, including payment status and history.
-
+**Description**: Handles booking payments securely, including payment status and history.  
 **Functionalities**:
 - Support for multiple payment methods, including credit/debit cards, and e-wallets.
 - Instant email and SMS notifications with booking details and a payment receipt.
 - Users can view their transaction details.
 
-e)**Login and User Management**
+e)**Login and User Management**  
 
-**Description**: Includes user registration and login functionality.
-
+**Description**: Includes user registration and login functionality.  
 **Functionalities**:
 - User roles (admin vs. user) will determine access to different features.
 
