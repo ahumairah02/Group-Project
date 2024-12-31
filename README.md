@@ -88,6 +88,9 @@ e)**Login and User Management**
 ![SqD](https://github.com/user-attachments/assets/6258e527-a119-4f6a-8938-0c4a3d00b0da)
 
 
+### Mock Up
+[View the Mock-Up on Canva](https://www.canva.com/design/DAGZthEtXYk/v3tOHtIv05zn2EpcwOnXLQ/edit)
+
 ### References
 
 1. GitHub Docs: Markdown Syntax Guide - [https://docs.github.com/en/get-started/writing-on-github/basic-writing-and-formatting-syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
