@@ -16,6 +16,13 @@ class DestinationSeeder extends Seeder
     {
         DB::table('destinations')->insert([
             [
+                'name' => 'Istanbul',
+                'description' => 'Istanbul is a beautiful city that straddles Europe and Asia across the Bosphorus Strait...',
+                'country' => 'Turkey',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
                 'name' => 'Kuala Lumpur',
                 'description' => 'The capital city of Malaysia, known for its iconic Petronas Towers and vibrant culture.',
                 'country' => 'Malaysia',
@@ -23,9 +30,9 @@ class DestinationSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'name' => 'Singapore',
-                'description' => 'A global financial hub and city-state in Southeast Asia.',
-                'country' => 'Singapore',
+                'name' => 'Marrakech',
+                'description' => 'Marrakech is a vibrant city located in Morocco. Known for its historical significance, the city offers a rich cultural experience with beautiful palaces, gardens, and markets.',
+                'country' => 'Morocco',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],

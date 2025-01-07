@@ -66,6 +66,30 @@ header .btn-get-started:hover {
   color: #ffffff;
 }
 
+.destination-header {
+    position: relative;
+    width: 100%;
+}
+
+.destination-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* White text for contrast */
+    text-align: center;
+    z-index: 2; /* Ensures the text appears above the image */
+}
+
+.destination-title h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.destination-title p {
+    font-size: 1.2rem;
+}
+
 .section-stats {
   margin-top: -50px;
 }
@@ -89,7 +113,7 @@ header .btn-get-started:hover {
 
 .section-popular {
   min-height: 540px;
-  background-color: #051334;
+  background-color: transparent;
   margin-top: -50px;
   margin-bottom: -230px;
 }
@@ -99,7 +123,7 @@ header .btn-get-started:hover {
 }
 
 .section-popular .section-popular-heading h2, .section-popular .section-popular-heading p {
-  color: #ffffff;
+  color: #000000;
 }
 
 .section-popular .section-popular-heading h2 {
@@ -113,13 +137,14 @@ header .btn-get-started:hover {
 }
 
 .section-popular-content .section-popular-travel .card-travel {
-  min-height: 380px;
-  background-color: #000;
-  color: #ffffff;
-  padding: 30px;
-  background-size: cover;
-  margin-bottom: 20px;
-}
+    min-height: 380px;
+    background-color: transparent; /* This might be the issue */
+    color: #ffffff;
+    padding: 30px;
+    background-size: cover;
+    margin-bottom: 20px;
+  }
+
 
 .section-popular-content .section-popular-travel .travel-country {
   font-family: 'Assistant', sans-serif;
@@ -135,15 +160,26 @@ header .btn-get-started:hover {
   color: #ffffff;
 }
 
-.section-popular-content .section-popular-travel .travel-button .btn-travel-details {
-  background-color: #FF9E53;
-  color: #ffffff;
-}
+/* Style for the travel button */
+.section-popular-content .section-popular-travel .btn-travel-details {
+    background-color: #071C4D; /* Orange background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Adjust padding for better size */
+    font-size: 16px;
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Ensure it's not block level */
+    text-align: center; /* Center text */
+    margin-top: 10px; /* Add some space above the button */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+  }
 
-.section-popular-content .section-popular-travel .travel-button .btn-travel-details:hover {
-  background-color: #ffaa69;
-  color: #ffffff;
-}
+  .section-popular-content .section-popular-travel .btn-travel-details:hover {
+    background-color: #2A53B4; /* Lighten the background on hover */
+    color: white; /* Keep text white */
+  }
+
+
 
 .section-network {
   background-color: #ffffff;
