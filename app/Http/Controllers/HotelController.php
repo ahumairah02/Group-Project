@@ -29,4 +29,11 @@ class HotelController extends Controller
         $hotels = Hotel::findOrFail($id);
         return view('hotels.show', compact('hotels'));
     }
+
+public function byDestination($destination_id)
+{
+    $hotels = Hotel::where('destination_id', $destination_id)->get();
+    return view('hotels.index', compact('hotels'));
+}
+
 }

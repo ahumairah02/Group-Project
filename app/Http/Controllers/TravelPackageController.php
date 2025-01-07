@@ -29,4 +29,12 @@ class TravelPackageController extends Controller
         $travel_packages = TravelPackage::findOrFail($id);
         return view('travel_packages.show', compact('travel_packages'));
     }
+
+    // TravelPackageController.php
+public function byDestination($destination_id)
+{
+    $packages = TravelPackage::where('destination_id', $destination_id)->get();
+    return view('travel-packages.index', compact('packages'));
+}
+
 }

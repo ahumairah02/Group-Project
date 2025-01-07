@@ -29,4 +29,12 @@ class RestaurantController extends Controller
         $restaurants = Restaurant::findOrFail($id);
         return view('restaurants.show', compact('restaurants'));
     }
+
+    // RestaurantController.php
+public function byDestination($destination_id)
+{
+    $restaurants = Restaurant::where('destination_id', $destination_id)->get();
+    return view('restaurants.index', compact('restaurants'));
+}
+
 }
