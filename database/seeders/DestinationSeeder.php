@@ -13,30 +13,34 @@ class DestinationSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        DB::table('destinations')->insert([
-            [
-                'name' => 'Istanbul',
-                'description' => 'Istanbul is a beautiful city that straddles Europe and Asia across the Bosphorus Strait...',
-                'country' => 'Turkey',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'name' => 'Kuala Lumpur',
-                'description' => 'The capital city of Malaysia, known for its iconic Petronas Towers and vibrant culture.',
-                'country' => 'Malaysia',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'name' => 'Marrakech',
-                'description' => 'Marrakech is a vibrant city located in Morocco. Known for its historical significance, the city offers a rich cultural experience with beautiful palaces, gardens, and markets.',
-                'country' => 'Morocco',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            // Add more destinations as needed
-        ]);
-    }
+{
+    DB::table('destinations')->insert([
+        [
+            'name' => 'Istanbul',
+            'description' => 'Istanbul is a beautiful city that straddles Europe and Asia across the Bosphorus Strait...',
+            'country' => 'Turkey',
+            'image' => 'images/istanbul.jpeg',  // Add the image file path
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+        [
+            'name' => 'Kuala Lumpur',
+            'description' => 'The capital city of Malaysia, known for its iconic Petronas Towers and vibrant culture.',
+            'country' => 'Malaysia',
+            'image' => 'images/KL.jpg',  // Add the image file path
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+        [
+            'name' => 'Marrakech',
+            'description' => 'Marrakech is a vibrant city located in Morocco. Known for its historical significance, the city offers a rich cultural experience with beautiful palaces, gardens, and markets.',
+            'country' => 'Morocco',
+            'image' => 'images/marrakech.jpg',  // Add the image file path
+            'created_at' => now(),
+            'updated_at' => now(),
+        ],
+        // Add more destinations as needed
+    ]);
+}
+
 }

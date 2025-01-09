@@ -8,15 +8,12 @@ NOMADS
 @section('content')
 <!-- header -->
 <header class="text-center">
+    <p>WELCOME TO</p>
     <h1>
-        Explore The Beautiful World
-        <br>
-        As Easy One Click
+        Taqwa Travels
     </h1>
     <p class="mt-3">
-        You will see beautiful
-        <br>
-        moment you never see before
+        Halal Travel Made Easy
     </p>
     <a href="#popular" class="btn btn-get-started px-4 mt-4">
         Get Started

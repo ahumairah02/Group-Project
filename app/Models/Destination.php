@@ -12,8 +12,15 @@ class Destination extends Model
     protected $primaryKey = 'destination_id';
 
     protected $fillable = [
-        'name', 'description', 'country'
+        'name', 'description', 'country', 'image' // Add 'image' to the fillable property
     ];
+
+    // Default image accessor (optional)
+    public function getImageAttribute($value)
+    {
+        // If image is null, return a default image path
+        return $value ? $value : 'frontend/images/default-image.jpg'; // Adjust default path as needed
+    }
 
     public function hotels()
     {

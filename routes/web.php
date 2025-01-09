@@ -18,8 +18,10 @@ Route::get('/user-dashboard', [UserDashboardController::class, 'index'])->name('
 
 // Destinations
 Route::resource('destinations', DestinationController::class);
+Route::get('/destinations', [DestinationController::class, 'index'])->name('destinations.index');
 Route::get('/destinations/{destination}', [DestinationController::class, 'show'])->name('destinations.show');
 Route::post('/destinations/submit', [DestinationController::class, 'submit'])->name('destinations.submit');
+Route::post('/destinations/search', [DestinationController::class, 'search'])->name('destinations.search');
 
 
 // web.php

@@ -6,7 +6,7 @@
 
 @section('content')
 <!-- Header Section -->
-<header class="text-center">
+<header class="text-center" style="">
     <h1>
         Destinations
     </h1>
@@ -21,54 +21,49 @@
         <section class="section-stats row justify-content-center" id="stats">
             <div class="col-12 col-md-12 col-lg-10 stats-detail" style="max-width: 1200px; padding-bottom: 30px; border: 1px solid #ddd;">
                 <h2>Choose Your Destination</h2>
-                <form action="{{ route('bookings') }}" method="POST"
-                      style="border: 1px solid #ddd; border-radius: 8px; padding: 20px; background-color: #f9f9f9;">
-                    @csrf
-                    <div class="form-row">
-                        <div class="col-md-4">
-                            <label for="destination">Select Destination</label>
-                            <select id="destination" name="destination" class="form-control" required>
-                                @foreach($destinations as $destination)
-                                    <option value="{{ $destination->destination_id }}">{{ $destination->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="col-md-2">
-                            <label for="depart_date">Departure Date</label>
-                            <input type="date" id="depart_date" name="depart_date" class="form-control" required>
-                        </div>
-                        <div class="col-md-2">
-                            <label for="return_date">Return Date</label>
-                            <input type="date" id="return_date" name="return_date" class="form-control" required>
-                        </div>
-                        <div class="col-md-2">
-                            <label for="duration">Duration (in days)</label>
-                            <input type="number" id="duration" name="duration" class="form-control" required min="1">
-                        </div>
-                        <div class="col-md-2 align-self-end">
-                            <button type="submit" class="btn btn-primary btn-block mt-2">Submit</button>
-                        </div>
-                    </div>
-                    <!-- Checkbox Section -->
-                    <div class="form-row mt-3">
-                        <div class="col-md-6">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="muslim_friendly" name="muslim_friendly">
-                                <label class="form-check-label" for="muslim_friendly">
-                                    Muslim-Friendly Attractions
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="halal_amenities" name="halal_amenities">
-                                <label class="form-check-label" for="halal_amenities">
-                                    Halal Amenities
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                <form action="{{ route('destinations.search') }}" method="POST"
+      style="border: 1px solid #ddd; border-radius: 8px; padding: 20px; background-color: #f9f9f9;">
+    @csrf
+    <div class="form-row">
+        <div class="col-md-3">
+            <label for="destination">Select Destination</label>
+            <select id="destination" name="destination" class="form-control" required>
+                @foreach($destinations as $destination)
+                    <option value="{{ $destination->destination_id }}">{{ $destination->name }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label for="depart_date">Departure Date</label>
+            <input type="date" id="depart_date" name="depart_date" class="form-control" required>
+        </div>
+        <div class="col-md-2">
+            <label for="return_date">Return Date</label>
+            <input type="date" id="return_date" name="return_date" class="form-control" required>
+        </div>
+        <div class="col-md-2">
+            <label for="travellers">Travellers (Qty)</label>
+            <input type="number" id="travellers" name="travellers" class="form-control" required min="1">
+        </div>
+        <div class="col-md-2">
+            <label for="cabin_class">Cabin Class</label>
+            <select id="cabin_class" name="cabin_class" class="form-control" required>
+                <option value="economy">Economy</option>
+                <option value="business">Business</option>
+                <option value="first_class">First Class</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Centered Button -->
+    <div class="form-row justify-content-center">
+        <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary mt-4">Search</button>
+        </div>
+    </div>
+</form>
+
+
             </div>
         </section>
     </div>
