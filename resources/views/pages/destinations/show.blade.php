@@ -1,11 +1,32 @@
 @extends('layouts.app')
 
 @section('content')
-<header class="text-center" class="destination-header" style="background-image: url('{{ asset('frontend/images/KL.jpg') }}');">
-    <h1>
-        {{ $destination->name }}
-    </h1>
-</header>
+<!-- Carousel Section -->
+<!-- Carousel Section -->
+<div id="destinationCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        @foreach($destination->images as $index => $image)
+        <div class="carousel-item @if($index === 0) active @endif">
+            <img src="{{ asset('frontend/images/' . $image->image_path) }}" class="d-block w-100" alt="Image {{ $index + 1 }}" style="height: 500px; object-fit: cover;">
+
+            <!-- Text overlay -->
+            <div class="carousel-caption d-flex justify-content-center align-items-center">
+                <h1>{{ $destination->name }}</h1> <!-- Text centered over the image -->
+            </div>
+        </div>
+        @endforeach
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#destinationCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#destinationCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
 
 <!-- Explore More About Destination Section -->
 <div class="options mt-5">

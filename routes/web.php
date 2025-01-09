@@ -7,14 +7,15 @@ use App\Http\Controllers\RestaurantController;
 use App\Http\Controllers\TravelPackageController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\PaymentController;
-use App\Http\Controllers\UserDashboardController; // Add this line
+use App\Http\Controllers\UserDashboardController;
 use App\Http\Controllers\HomeController;
+use App\Models\Destination; // Add this line
 
+// Home Page
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-
 // User Dashboard
-Route::get('/user-dashboard', [UserDashboardController::class, 'index'])->name('user-dashboard'); // Add the user-dashboard route
+Route::get('/user-dashboard', [UserDashboardController::class, 'index'])->name('user-dashboard');
 
 // Destinations
 Route::resource('destinations', DestinationController::class);
@@ -23,8 +24,8 @@ Route::get('/destinations/{destination}', [DestinationController::class, 'show']
 Route::post('/destinations/submit', [DestinationController::class, 'submit'])->name('destinations.submit');
 Route::post('/destinations/search', [DestinationController::class, 'search'])->name('destinations.search');
 
-
-// web.php
+// New Route for Showing Destination Images
+Route::get('/destinations/{id}/images', [DestinationController::class, 'showImages'])->name('destinations.images');
 
 // Hotels
 Route::get('/hotels', [HotelController::class, 'index'])->name('hotels.index');
@@ -37,7 +38,6 @@ Route::get('/restaurants/{destination_id}', [RestaurantController::class, 'byDes
 // Travel Packages
 Route::get('/travel-packages', [TravelPackageController::class, 'index'])->name('travel-packages.index');
 Route::get('/travel-packages/{destination_id}', [TravelPackageController::class, 'byDestination'])->name('travel-packages.byDestination');
-
 
 // Bookings
 Route::get('/bookings', [BookingController::class, 'index'])->name('bookings');

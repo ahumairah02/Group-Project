@@ -36,4 +36,13 @@ class Destination extends Model
     {
         return $this->hasMany(TravelPackage::class, 'destination_id', 'destination_id');
     }
+
+    // Destination.php
+    public function images()
+    {
+        return $this->hasMany(Image::class, 'destination_id', 'destination_id');
+    }
+
+
 }
+

@@ -66,12 +66,6 @@ header .btn-get-started:hover {
   color: #ffffff;
 }
 
-.destination-header {
-    height: 400px; /* or whatever height you want for the header */
-    background-size: cover;
-    background-position: center;
-}
-
 
 .destination-title {
     position: absolute;
@@ -530,4 +524,43 @@ header .btn-get-started:hover {
   background-color: #2A53B4;
   color: #fff;
 }
-/*# sourceMappingURL=main.css.map */
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Adjust color as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Optional: Adds shadow to text for better visibility */
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; /* Adjust font size as needed */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0.5;  /* Reduce opacity */
+    background-color: rgba(0, 0, 0, 0.3); /* Optional: Adds semi-transparent background */
+    border: none;  /* Remove border */
+    color: white;  /* Text color */
+    width: 5%;  /* Adjust width of the buttons */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 0.8;  /* Increase opacity on hover */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: white;  /* White icons */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+

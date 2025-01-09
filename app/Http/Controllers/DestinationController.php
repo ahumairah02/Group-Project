@@ -11,71 +11,51 @@ class DestinationController extends Controller
 {
     public function index()
     {
-        // Fetch all destinations
         $destinations = Destination::all();
+        $suggestedDestinations = Destination::inRandomOrder()->limit(4)->get();
 
-        // Fetch suggested destinations (e.g., based on a similar category or random selection)
-        $suggestedDestinations = Destination::inRandomOrder()->limit(4)->get();  // Example for random suggestions
-
-        // Pass both to the view
         return view('pages.destinations.index', compact('destinations', 'suggestedDestinations'));
     }
 
-    // Show destination with optional related data
     public function show($id, $withRelatedData = false)
     {
-        // Check if related data needs to be loaded
-        if ($withRelatedData) {
-            // Load destination with related data (hotels, restaurants, travel packages)
-            $destination = Destination::with(['hotels', 'restaurants', 'travelPackages'])->findOrFail($id);
-        } else {
-            // Load only the destination without related data
-            $destination = Destination::findOrFail($id);
-        }
-
-        return view('pages.destinations.show', compact('destination'));
+    if ($withRelatedData) {
+        $destination = Destination::with(['hotels', 'restaurants', 'travelPackages', 'images'])->findOrFail($id);
+    } else {
+        $destination = Destination::with('images')->findOrFail($id);
     }
 
-    // Store new destination with image
+    return view('pages.destinations.show', compact('destination'));
+    }
+
+
     public function store(Request $request)
     {
-        // Validate the form data
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
             'country' => 'required|string',
-            'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048', // Validate the image file
+            'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
         ]);
 
-        // Create a new Destination instance
         $destination = new Destination();
         $destination->name = $request->name;
         $destination->description = $request->description;
         $destination->country = $request->country;
 
-        // Handle the image upload if the file is provided
         if ($request->hasFile('image')) {
-            // Generate a unique name for the image
             $imageName = time() . '.' . $request->image->extension();
-
-            // Move the image to the public folder (frontend/images in this case)
             $request->image->move(public_path('frontend/images'), $imageName);
-
-            // Store the image name in the database
             $destination->image = $imageName;
         }
 
-        // Save the destination record
         $destination->save();
 
-        // Redirect to the destinations index page
         return redirect()->route('destinations.index')->with('success', 'Destination created successfully!');
     }
 
-    // Handle trip submission (saving trip details in the session)
     public function submit(Request $request)
     {
-        // Validate the form data
         $validated = $request->validate([
             'destination_id' => 'required|exists:destinations,destination_id',
             'depart_date' => 'required|date',
@@ -83,11 +63,8 @@ class DestinationController extends Controller
             'duration' => 'required|integer|min:1',
         ]);
 
-        // Get destination details
         $destination = Destination::findOrFail($request->destination_id);
 
-        // Process or store the data as needed
-        // Example: Store it in the session for later use
         $tripDetails = [
             'destination' => $destination,
             'depart_date' => $request->depart_date,
@@ -97,11 +74,9 @@ class DestinationController extends Controller
 
         session(['tripDetails' => $tripDetails]);
 
-        // Redirect to a page with trip details or display success message
         return redirect()->route('destinations.index')->with('success', 'Trip details saved successfully!');
     }
 
-    // Search for destinations with halal-friendly amenities and flights
     public function search(Request $request)
     {
         $request->validate([
@@ -115,7 +90,6 @@ class DestinationController extends Controller
         $destinationId = $request->input('destination');
         $destination = Destination::find($destinationId);
 
-        // Fetch halal-friendly amenities and flights (mock data for example)
         $hotels = Hotel::where('destination_id', $destinationId)->get();
         $restaurants = Restaurant::where('destination_id', $destinationId)->get();
         $flights = [
@@ -124,5 +98,17 @@ class DestinationController extends Controller
         ];
 
         return view('pages.destinations.results', compact('destination', 'hotels', 'restaurants', 'flights'));
+    }
+
+    // New method to display images of a destination
+    public function showImages($id)
+    {
+        $destination = Destination::with('images')->find($id);
+
+        if (!$destination) {
+            return view('errors.404', ['message' => 'Destination not found.']);
+        }
+
+        return view('pages.destinations.images', ['destination' => $destination]);
     }
 }
