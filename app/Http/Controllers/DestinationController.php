@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Destination;
 use App\Models\Hotel;
 use App\Models\Restaurant;
+use App\Models\Flight;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class DestinationController extends Controller
 {
@@ -85,21 +87,30 @@ class DestinationController extends Controller
             'return_date' => 'required|date|after_or_equal:depart_date',
             'travellers' => 'required|integer|min:1',
             'cabin_class' => 'required|string',
+            'filter' => 'nullable|string|in:affordable,expensive',
         ]);
 
         $destinationId = $request->input('destination');
         $destination = Destination::find($destinationId);
 
+        // Get related hotels and restaurants for the destination
         $hotels = Hotel::where('destination_id', $destinationId)->get();
         $restaurants = Restaurant::where('destination_id', $destinationId)->get();
-        $flights = [
-            ['flight_no' => 'MH123', 'price' => 500, 'cabin_class' => $request->input('cabin_class')],
-            ['flight_no' => 'SQ456', 'price' => 700, 'cabin_class' => $request->input('cabin_class')],
-        ];
+
+        // Get flights related to the destination using the Flight model
+        $flights = Flight::where('destination_id', $destinationId);
+
+        // Apply filter for affordability
+        if ($request->input('filter') == 'affordable') {
+            $flights = $flights->orderBy('price', 'asc');
+        } elseif ($request->input('filter') == 'expensive') {
+            $flights = $flights->orderBy('price', 'desc');
+        }
+
+        $flights = $flights->get(); // Executes the query
 
         return view('pages.destinations.results', compact('destination', 'hotels', 'restaurants', 'flights'));
     }
-
     // New method to display images of a destination
     public function showImages($id)
     {
@@ -111,4 +122,26 @@ class DestinationController extends Controller
 
         return view('pages.destinations.images', ['destination' => $destination]);
     }
+    public function storeFlightImage(Request $request, $flightId)
+{
+    $request->validate([
+        'image' => 'required|image|mimes:jpg,jpeg,png,gif|max:2048',
+    ]);
+
+    $flight = Flight::findOrFail($flightId);
+
+    // Store the image file
+    $imagePath = $request->file('image')->store('frontend/images', 'public');
+
+    // Save image data in the images table
+    $flight->images()->create([
+        'image_path' => $imagePath, // Path to the image
+    ]);
+
+    return redirect()->route('flights.show', $flightId)->with('success', 'Image uploaded successfully!');
 }
+
+}
+
+
+

@@ -41,6 +41,7 @@ Route::get('/travel-packages/{destination_id}', [TravelPackageController::class,
 
 // Bookings
 Route::get('/bookings', [BookingController::class, 'index'])->name('bookings');
+Route::get('/booking/{flight_id}', [BookingController::class, 'show'])->name('booking.page');
 
 // Payments
 Route::resource('payments', PaymentController::class);

@@ -554,11 +554,6 @@ header .btn-get-started:hover {
     opacity: 0.8;  /* Increase opacity on hover */
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: white;  /* White icons */
-}
-
 .carousel-control-prev,
 .carousel-control-next {
     transition: opacity 0.3s ease, background-color 0.3s ease;

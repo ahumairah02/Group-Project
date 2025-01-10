@@ -15,5 +15,9 @@ class Image extends Model
         return $this->belongsTo(Destination::class, 'destination_id', 'destination_id');
     }
 
+    public function flight()
+    {
+        return $this->belongsTo(Flight::class, 'flight_id', 'flights_id');
+    }
 
 }
