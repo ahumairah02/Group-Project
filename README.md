@@ -26,7 +26,7 @@ The primary objective of the Shariah-Compliant Travel Planner is to provide a on
 2. Customization: Enabling users to tailor their itineraries to meet personal preferences and religious obligations.
 3. Inclusivity: Promoting halal tourism as a part of the global travel industry.
 4. Awareness: Enhancing awareness of halal tourism services among service providers and travelers alike.
-try
+try test
 ### Features & Functionalities
 
 a) **Halal-Certified Hotel Finder**
