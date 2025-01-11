@@ -48,3 +48,8 @@ Route::resource('payments', PaymentController::class);
 // Flights
 Route::get('/flights', [FlightController::class, 'index'])->name('flights.index');
 Route::post('/flights/search', [FlightController::class, 'search'])->name('flights.search');
+Route::get('/flights/book/{flight_id}', [FlightController::class, 'book'])->name('flights.book');
+Route::post('/flights/book/{flight_id}', [FlightController::class, 'book'])->name('flights.book.submit');
+Route::get('flights/confirmation', function () {
+    return view('pages.flights.confirmation');
+})->name('flights.confirmation');

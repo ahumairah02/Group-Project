@@ -26,6 +26,6 @@ class Flight extends Model
     // Relationship with Destination
     public function destination()
     {
-        return $this->belongsTo(Destination::class);
+        return $this->belongsTo(Destination::class,'destination_id', 'destination_id');
     }
 }
