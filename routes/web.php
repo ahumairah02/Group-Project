@@ -9,7 +9,10 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\UserDashboardController;
 use App\Http\Controllers\HomeController;
-use App\Models\Destination; // Add this line
+use App\Models\Destination;
+use App\Models\Prayer;
+use App\Http\Controllers\PrayerController;
+ // Add this line
 
 // Home Page
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -30,10 +33,13 @@ Route::get('/destinations/{id}/images', [DestinationController::class, 'showImag
 // Hotels
 Route::get('/hotels', [HotelController::class, 'index'])->name('hotels.index');
 Route::get('/hotels/{destination_id}', [HotelController::class, 'byDestination'])->name('hotels.byDestination');
+Route::get('/hotels/{id}', [HotelController::class, 'show'])->name('hotels.show');
+
 
 // Restaurants
-Route::get('/restaurants', [RestaurantController::class, 'index'])->name('restaurants.index');
-Route::get('/restaurants/{destination_id}', [RestaurantController::class, 'byDestination'])->name('restaurants.byDestination');
+Route::get('/restaurants', [RestaurantController::class, 'index'])->name('restaurant.index');
+Route::get('/restaurant', [RestaurantController::class, 'show'])->name('restaurant.show');
+Route::get('/restaurants/{destination_id}', [RestaurantController::class, 'byDestination'])->name('restaurant.byDestination');
 
 // Travel Packages
 Route::get('/travel-packages', [TravelPackageController::class, 'index'])->name('travel-packages.index');
@@ -45,3 +51,11 @@ Route::get('/booking/{flight_id}', [BookingController::class, 'show'])->name('bo
 
 // Payments
 Route::resource('payments', PaymentController::class);
+
+//Prayer
+Route::get('/prayer-space', [PrayerController::class, 'index'])->name('prayer-space');
+Route::get('/api/prayer-times', [PrayerController::class, 'getPrayerTimes']);
+Route::get('/api/qiblah', [PrayerController::class, 'getQiblahDirection']);
+Route::get('/api/nearby-mosques', [PrayerController::class, 'getNearbyMosques']);
+
+

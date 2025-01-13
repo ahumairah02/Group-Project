@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -10,6 +11,8 @@ class DatabaseSeeder extends Seeder
     {
         // Call the DestinationSeeder to seed the destinations table
         $this->call(DestinationSeeder::class);
+
+        $this->call(HotelSeeder::class);
     }
 }
 

@@ -1,0 +1,17 @@
+/* styles.css */
+.card {
+    background-color: #fdf5e6; /* Light cream */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bg-warning {
+    background-color: #ffd700 !important; /* Gold for highlighted Asr prayer */
+    border-radius: 4px;
+}
+
+#mosque-map {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+

@@ -51,7 +51,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Restaurants</h5>
                     <p class="card-text">Explore the top restaurants in {{ $destination->name }}.</p>
-                    <a href="{{ route('restaurants.index', ['destination_id' => $destination->destination_id]) }}" class="btn btn-primary">View Restaurants</a>
+                    <a href="{{ route('restaurant.index', ['destination_id' => $destination->destination_id]) }}" class="btn btn-primary">View Restaurants</a>
                 </div>
             </div>
         </div>

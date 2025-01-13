@@ -11,18 +11,18 @@
         <div class="collapse navbar-collapse" id="navb">
             <ul class="navbar-nav ml-auto mr-3">
                 <li class="nav-item mx-md-2">
-                    <a href="" class="nav-link active">Home</a>
+                    <a href="" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item mx-md-2">
                     <a href="{{ route('destinations.index') }}" class="nav-link">Destinations</a>
                 </li>
 
                 <li class="nav-item mx-md-2">
-                    <a href="#" class="nav-link">Hotels</a>
+                    <a href="{{ route('hotels.index') }}" class="nav-link">Hotels</a>
                 </li>
 
                 <li class="nav-item mx-md-2">
-                    <a href="#" class="nav-link">Restaurants</a>
+                    <a href="{{ route('restaurant.index') }}" class="nav-link">Restaurants</a>
                 </li>
 
                 <li class="nav-item mx-md-2">
@@ -30,7 +30,7 @@
                 </li>
 
                 <li class="nav-item mx-md-2">
-                    <a href="#" class="nav-link">Prayer Space</a>
+                    <a href="{{ route('prayer-space') }}" class="nav-link">Prayer Space</a>
                 </li>
             </ul>
 
