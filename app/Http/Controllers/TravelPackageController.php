@@ -12,14 +12,14 @@ class TravelPackageController extends Controller
     public function index()
     {
         $travel_packages = TravelPackage::with('destination')->get(); // Load related destination
-        return view('travel_packages.index', compact('travel_packages'));
+        return view('pages.travel_packages.index', compact('travel_packages'));
     }
 
     // Show the form for creating a new travel package
     public function create()
     {
         $destinations = Destination::all(); // Fetch all destinations for the dropdown
-        return view('travel_packages.create', compact('destinations'));
+        return view('pages.travel_packages.create', compact('destinations'));
     }
 
     // Store a newly created travel package in the database
@@ -30,7 +30,7 @@ class TravelPackageController extends Controller
             'description' => 'required|string',
             'price' => 'required|numeric|min:0',
             'duration' => 'required|integer|min:1',
-            'destination_id' => 'required|exists:destinations,id', // Ensure the destination exists
+            'destination_id' => 'required|exists:destinations,destination_id', // Ensure the destination exists
             'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
         ]);
 
@@ -45,22 +45,23 @@ class TravelPackageController extends Controller
 
         $travelPackage->save();
 
-        return redirect()->route('travel_packages.index')->with('success', 'Travel package created successfully!');
+        return redirect()->route('pages.travel_packages.index')->with('success', 'Travel package created successfully!');
     }
 
     // Display the details of a specific travel package
     public function show($id)
     {
-        $travel_package = TravelPackage::with('destination')->findOrFail($id); // Load related destination
-        return view('travel_packages.show', compact('travel_package'));
+    $travel_package = TravelPackage::with('destination')->findOrFail($id); // Load related destination
+    return view('pages.travel_packages.show', compact('travel_package'));
     }
+
 
     // Show the form for editing an existing travel package
     public function edit($id)
     {
         $travel_package = TravelPackage::findOrFail($id);
         $destinations = Destination::all();
-        return view('travel_packages.edit', compact('travel_package', 'destinations'));
+        return view('pages.travel_packages.edit', compact('travel_package', 'destinations'));
     }
 
     // Update an existing travel package in the database
@@ -71,7 +72,7 @@ class TravelPackageController extends Controller
             'description' => 'required|string',
             'price' => 'required|numeric|min:0',
             'duration' => 'required|integer|min:1',
-            'destination_id' => 'required|exists:destinations,id',
+            'destination_id' => 'required|exists:destinations,destination_id',
             'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
         ]);
 
@@ -86,7 +87,7 @@ class TravelPackageController extends Controller
 
         $travelPackage->update($validated);
 
-        return redirect()->route('travel_packages.index')->with('success', 'Travel package updated successfully!');
+        return redirect()->route('pages.travel_packages.index')->with('success', 'Travel package updated successfully!');
     }
 
     // Delete an existing travel package
@@ -94,13 +95,13 @@ class TravelPackageController extends Controller
     {
         $travelPackage = TravelPackage::findOrFail($id);
         $travelPackage->delete();
-        return redirect()->route('travel_packages.index')->with('success', 'Travel package deleted successfully!');
+        return redirect()->route('pages.travel_packages.index')->with('success', 'Travel package deleted successfully!');
     }
 
     // Display travel packages by destination
     public function byDestination($destination_id)
     {
         $packages = TravelPackage::where('destination_id', $destination_id)->get();
-        return view('travel_packages.index', compact('packages'));
+        return view('pages.travel_packages.index', compact('packages'));
     }
 }

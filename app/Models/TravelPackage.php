@@ -51,4 +51,5 @@ class TravelPackage extends Model
     {
         return $query->where('destination_id', $destinationId);
     }
+
 }

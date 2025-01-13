@@ -10,6 +10,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\UserDashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FlightController;
+use App\Models\TravelPackage;
 
 // Home Page
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -35,12 +36,14 @@ Route::get('/restaurants', [RestaurantController::class, 'index'])->name('restau
 Route::get('/restaurants/{destination_id}', [RestaurantController::class, 'byDestination'])->name('restaurants.byDestination');
 
 // Travel Packages
-// Routes for Travel Packages
+Route::get('/travel_packages', [TravelPackageController::class, 'index'])->name('travel_packages.index');
 Route::resource('travel_packages', TravelPackageController::class);
+Route::get('/travel_packages/{destination_id}', [TravelPackageController::class, 'byDestination'])->name('travel_packages.byDestination');
 
 // Additional route for filtering packages by destination
 Route::get('travel_packages/destination/{destination_id}', [TravelPackageController::class, 'byDestination'])
     ->name('travel_packages.byDestination');
+
 
 // Bookings
 Route::get('/bookings', [BookingController::class, 'index'])->name('bookings');
