@@ -47,11 +47,11 @@ Taqwa Travels
         <div class="container">
             <div class="row">
                 <div class="col text-center section-popular-heading">
-                    <h2>Wisata Populer</h2>
+                    <h2>Halal Adventures</h2>
                     <p>
-                        Something that you never try
+                        Explore the Unseen,
                         <br>
-                        before in this world
+                        the Halal Way.
                     </p>
                 </div>
             </div>
@@ -84,9 +84,9 @@ Taqwa Travels
                 <div class="col-md-4">
                     <h2>Our Networks</h2>
                     <p>
-                        Companies are trusted us
+                        Trusted Partners for
                         <br>
-                        more than just a trip
+                        Your Halal Journey
                     </p>
                 </div>
                 <div class="col-md-8 text-center">
@@ -100,11 +100,11 @@ Taqwa Travels
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <h2>They Are Loving Us</h2>
+                    <h2>Why Guests Love Us</h2>
                     <p>
-                        Moments were giving them
+                        Experiences That Embrace
                         <br>
-                        the best experience
+                        The Halal Way
                     </p>
                 </div>
             </div>
@@ -118,17 +118,14 @@ Taqwa Travels
                     <div class="card card-testimonial text-center">
                         <div class="testimonial-content">
                             <img src="frontend/images/testimonial/user_pic1.png" alt="user" class="mb-4 rounded-circle">
-                            <h3 class="mb-4"> Angga Rizky </h3>
+                            <h3 class="mb-4"> Aminah Zakaria </h3>
                             <p class="testimonial">
-                                “ It was glorious and I could
-                                not stop to say wohooo for
-                                every single moment
-                                Dankeeeeee “
+                                “ It was a peaceful journey, and I felt so at ease knowing every aspect was thoughtfully arranged to follow Islamic values. “
                             </p>
                         </div>
                         <hr />
                         <p class="trip-to mt-2">
-                            Trip to Ubud
+                            Trip to Istanbul
                         </p>
                     </div>
                 </div>
@@ -138,15 +135,12 @@ Taqwa Travels
                             <img src="frontend/images/testimonial/user_pic2.png" alt="user" class="mb-4 rounded-circle">
                             <h3 class="mb-4"> Shayna </h3>
                             <p class="testimonial">
-                                “ The trip was amazing and
-                                I saw something beautiful in
-                                that Island that makes me
-                                want to learn more “
+                                “ This trip was incredible! From the halal meals to the prayer-friendly itineraries, everything made me feel right at home. “
                             </p>
                         </div>
                         <hr />
                         <p class="trip-to mt-2">
-                            Trip to Nusa Penida
+                            Trip to Marrakech
                         </p>
                     </div>
                 </div>
@@ -156,14 +150,12 @@ Taqwa Travels
                             <img src="frontend/images/testimonial/user_pic3.png" alt="user" class="mb-4 rounded-circle">
                             <h3 class="mb-4"> Shabrina </h3>
                             <p class="testimonial">
-                                “ I loved it when the waves
-                                was shaking harder — I was
-                                scared too “
+                                “ The breathtaking views and Shariah-compliant arrangements ensured my family could relax and enjoy without worry. Thank you! “
                             </p>
                         </div>
                         <hr />
                         <p class="trip-to mt-2">
-                            Trip to Karimun Jawa
+                            Trip to Kuala Lumpur
                         </p>
                     </div>
                 </div>

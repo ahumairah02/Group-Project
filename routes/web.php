@@ -9,7 +9,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\UserDashboardController;
 use App\Http\Controllers\HomeController;
-use App\Models\Destination; // Add this line
+use App\Http\Controllers\FlightController;
 
 // Home Page
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -22,7 +22,6 @@ Route::resource('destinations', DestinationController::class);
 Route::get('/destinations', [DestinationController::class, 'index'])->name('destinations.index');
 Route::get('/destinations/{destination}', [DestinationController::class, 'show'])->name('destinations.show');
 Route::post('/destinations/submit', [DestinationController::class, 'submit'])->name('destinations.submit');
-Route::post('/destinations/search', [DestinationController::class, 'search'])->name('destinations.search');
 
 // New Route for Showing Destination Images
 Route::get('/destinations/{id}/images', [DestinationController::class, 'showImages'])->name('destinations.images');
@@ -49,3 +48,12 @@ Route::get('/booking/{flight_id}', [BookingController::class, 'show'])->name('bo
 
 // Payments
 Route::resource('payments', PaymentController::class);
+
+// Flights
+Route::get('/flights', [FlightController::class, 'index'])->name('flights.index');
+Route::post('/flights/search', [FlightController::class, 'search'])->name('flights.search');
+Route::get('/flights/book/{flight_id}', [FlightController::class, 'book'])->name('flights.book');
+Route::post('/flights/book/{flight_id}', [FlightController::class, 'book'])->name('flights.book.submit');
+Route::get('flights/confirmation', function () {
+    return view('pages.flights.confirmation');
+})->name('flights.confirmation');

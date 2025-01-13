@@ -21,15 +21,14 @@ class DestinationController extends Controller
 
     public function show($id, $withRelatedData = false)
     {
-    if ($withRelatedData) {
-        $destination = Destination::with(['hotels', 'restaurants', 'travelPackages', 'images'])->findOrFail($id);
-    } else {
-        $destination = Destination::with('images')->findOrFail($id);
-    }
+        if ($withRelatedData) {
+            $destination = Destination::with(['hotels', 'restaurants', 'travelPackages', 'images'])->findOrFail($id);
+        } else {
+            $destination = Destination::with('images')->findOrFail($id);
+        }
 
-    return view('pages.destinations.show', compact('destination'));
+        return view('pages.destinations.show', compact('destination'));
     }
-
 
     public function store(Request $request)
     {
@@ -97,20 +96,17 @@ class DestinationController extends Controller
         $hotels = Hotel::where('destination_id', $destinationId)->get();
         $restaurants = Restaurant::where('destination_id', $destinationId)->get();
 
-        // Get flights related to the destination using the Flight model
-        $flights = Flight::where('destination_id', $destinationId);
+        // Get flights related to the destination (assumed relationship with flights table)
+        // $flights = Flight::where('destination_id', $destinationId)
+        //                  ->whereDate('depart_date', '>=', $request->depart_date)
+        //                  ->whereDate('return_date', '<=', $request->return_date)
+        //                  ->get();
 
-        // Apply filter for affordability
-        if ($request->input('filter') == 'affordable') {
-            $flights = $flights->orderBy('price', 'asc');
-        } elseif ($request->input('filter') == 'expensive') {
-            $flights = $flights->orderBy('price', 'desc');
-        }
 
-        $flights = $flights->get(); // Executes the query
-
-        return view('pages.destinations.results', compact('destination', 'hotels', 'restaurants', 'flights'));
+        // Return the search results view with destination, hotels, restaurants, and flights
+        return view('pages.flights.results', compact('destination', 'hotels', 'restaurants', 'flights'));
     }
+
     // New method to display images of a destination
     public function showImages($id)
     {
@@ -122,26 +118,4 @@ class DestinationController extends Controller
 
         return view('pages.destinations.images', ['destination' => $destination]);
     }
-    public function storeFlightImage(Request $request, $flightId)
-{
-    $request->validate([
-        'image' => 'required|image|mimes:jpg,jpeg,png,gif|max:2048',
-    ]);
-
-    $flight = Flight::findOrFail($flightId);
-
-    // Store the image file
-    $imagePath = $request->file('image')->store('frontend/images', 'public');
-
-    // Save image data in the images table
-    $flight->images()->create([
-        'image_path' => $imagePath, // Path to the image
-    ]);
-
-    return redirect()->route('flights.show', $flightId)->with('success', 'Image uploaded successfully!');
 }
-
-}
-
-
-
