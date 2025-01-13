@@ -19,12 +19,6 @@ return new class extends Migration
             ->on('destinations')
             ->onDelete('cascade');
             $table->string('image_path');
-            $table->unsignedBigInteger('flights_id'); // Ensure it's unsigned big integer
-            $table->foreign('flights_id')
-            ->references('flights_id')
-            ->on('flights')
-            ->onDelete('cascade');
-            $table->string('flight_image');
             $table->timestamps();
         });
 

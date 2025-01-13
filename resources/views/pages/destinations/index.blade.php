@@ -11,7 +11,7 @@
         Destinations
     </h1>
     <p class="mt-3">
-        Home >> Destinations
+        Explore Top Halal-Friendly Places
     </p>
 </header>
 
@@ -21,7 +21,7 @@
         <section class="section-stats row justify-content-center" id="stats">
             <div class="col-12 col-md-12 col-lg-10 stats-detail" style="max-width: 1200px; padding-bottom: 30px; border: 1px solid #ddd;">
                 <h2>Choose Your Destination</h2>
-                <form action="{{ route('destinations.search') }}" method="POST"
+                <form action="{{ route('flights.search') }}" method="POST"
                       style="border: 1px solid #ddd; border-radius: 8px; padding: 20px; background-color: #f9f9f9;">
                     @csrf
                     <div class="form-row">

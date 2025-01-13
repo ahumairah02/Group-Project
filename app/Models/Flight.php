@@ -9,17 +9,23 @@ class Flight extends Model
 {
     use HasFactory;
 
-    // Specify the table name if it doesn't follow Laravel's naming convention
-    protected $table = 'flights';
+    protected $primaryKey = 'flight_id';
 
-    // Set the primary key to `flights_id`
-    protected $primaryKey = 'flights_id';
+    protected $fillable = [
+        'flight_no',
+        'price',
+        'destination_id',
+    ];
 
-    // Optionally, you can specify the columns that are mass assignable
-    protected $fillable = ['flight_no', 'price', 'destination_id', 'flight_image'];
+    // Relationship with Images
+    // public function images()
+    // {
+    //     return $this->hasMany(Image::class, 'flight_id');
+    // }
 
-    public function images()
+    // Relationship with Destination
+    public function destination()
     {
-        return $this->hasMany(Image::class, 'flight_id', 'flights_id');
+        return $this->belongsTo(Destination::class,'destination_id', 'destination_id');
     }
 }

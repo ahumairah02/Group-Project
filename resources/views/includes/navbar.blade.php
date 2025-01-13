@@ -22,11 +22,15 @@
                 </li>
 
                 <li class="nav-item mx-md-2">
+<<<<<<< HEAD
                     <a href="{{ route('restaurant.index') }}" class="nav-link">Restaurants</a>
+=======
+                    <a href="{{ route('restaurant.navRestaurant') }}" class="nav-link">Restaurants</a>
+>>>>>>> c49357de4de771faff05afe7535630b20f6c2025
                 </li>
 
                 <li class="nav-item mx-md-2">
-                    <a href="#" class="nav-link">Travel Package</a>
+                    <a href="{{ route('travel_packages.index') }}" class="nav-link">Travel Package</a>
                 </li>
 
                 <li class="nav-item mx-md-2">

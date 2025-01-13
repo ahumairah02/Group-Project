@@ -63,7 +63,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Travel Packages</h5>
                     <p class="card-text">Check out the best travel packages for {{ $destination->name }}.</p>
-                    <a href="{{ route('travel-packages.index', ['destination_id' => $destination->destination_id]) }}" class="btn btn-primary">View Travel Packages</a>
+                    <a href="{{ route('travel_packages.index', ['destination_id' => $destination->destination_id]) }}" class="btn btn-primary">View Travel Packages</a>
                 </div>
             </div>
         </div>

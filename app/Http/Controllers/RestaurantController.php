@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
 {
+<<<<<<< HEAD
     /*public function index()
     {
         $restaurants = Restaurant::with('destination')->paginate(10);
@@ -28,6 +29,29 @@ class RestaurantController extends Controller
         return view('pages.restaurant.index', compact('restaurants', 'destination'));
     }
 
+=======
+    public function navRestaurant()
+    {
+        $restaurants = Restaurant::with('destination')->paginate(10);
+        return view('pages.restaurant.index', compact('restaurants'));
+    }
+
+    public function index(Request $request)
+    {
+        // Get the destination ID from the query string
+        $destination_id = $request->query('destination_id');
+
+        // Retrieve restaurants based on the destination ID
+        $restaurants = Restaurant::where('destination_id', $destination_id)->get();
+
+        // Retrieve the destination name
+        $destination = Destination::find($destination_id);
+
+        // Pass restaurants to the view
+        return view('pages.restaurant.index', compact('restaurants', 'destination'));
+    }
+
+>>>>>>> c49357de4de771faff05afe7535630b20f6c2025
 
 
     public function create()
