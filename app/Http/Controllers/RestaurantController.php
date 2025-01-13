@@ -8,11 +8,11 @@ use Illuminate\Support\Facades\Session;
 
 class RestaurantController extends Controller
 {
-    public function navRestaurant()
+    /*public function index()
     {
         $restaurants = Restaurant::with('destination')->paginate(10);
         return view('pages.restaurant.index', compact('restaurants'));
-    }
+    }*/
 
     public function index(Request $request)
     {
@@ -28,6 +28,14 @@ class RestaurantController extends Controller
         // Pass restaurants to the view
         return view('pages.restaurant.index', compact('restaurants', 'destination'));
     }
+
+    public function navRestaurant()
+    {
+        $restaurants = Restaurant::with('destination')->paginate(10);
+        return view('pages.restaurant.index', compact('restaurants'));
+    }
+
+
 
 
 

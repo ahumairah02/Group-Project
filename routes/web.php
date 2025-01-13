@@ -9,7 +9,12 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\UserDashboardController;
 use App\Http\Controllers\HomeController;
+use App\Models\Destination;
+use App\Models\Prayer;
+use App\Http\Controllers\PrayerController;
+ // Add this line
 use App\Http\Controllers\FlightController;
+use App\Models\TravelPackage;
 
 // Home Page
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -29,6 +34,8 @@ Route::get('/destinations/{id}/images', [DestinationController::class, 'showImag
 // Hotels
 Route::get('/hotels', [HotelController::class, 'index'])->name('hotels.index');
 Route::get('/hotels/{destination_id}', [HotelController::class, 'byDestination'])->name('hotels.byDestination');
+Route::get('/hotels/{id}', [HotelController::class, 'show'])->name('hotels.show');
+
 
 // Restaurants
 Route::get('/restaurants', [RestaurantController::class, 'index'])->name('restaurant.index');
@@ -38,9 +45,17 @@ Route::get('/restaurants/destination/{destination_id}', [RestaurantController::c
 Route::post('/restaurants/save', [RestaurantController::class, 'save'])->name('restaurant.save');
 Route::get('/restaurants/saved', [RestaurantController::class, 'saved'])->name('restaurant.saved');
 
+
+
 // Travel Packages
-Route::get('/travel-packages', [TravelPackageController::class, 'index'])->name('travel-packages.index');
-Route::get('/travel-packages/{destination_id}', [TravelPackageController::class, 'byDestination'])->name('travel-packages.byDestination');
+Route::get('/travel_packages', [TravelPackageController::class, 'index'])->name('travel_packages.index');
+Route::resource('travel_packages', TravelPackageController::class);
+Route::get('/travel_packages/{destination_id}', [TravelPackageController::class, 'byDestination'])->name('travel_packages.byDestination');
+
+// Additional route for filtering packages by destination
+Route::get('travel_packages/destination/{destination_id}', [TravelPackageController::class, 'byDestination'])
+    ->name('travel_packages.byDestination');
+
 
 // Bookings
 Route::get('/bookings', [BookingController::class, 'index'])->name('bookings');
@@ -49,11 +64,16 @@ Route::get('/booking/{flight_id}', [BookingController::class, 'show'])->name('bo
 // Payments
 Route::resource('payments', PaymentController::class);
 
+// Prayers
+Route::get('/prayer-space', [PrayerController::class, 'index'])->name('prayer-space');
+Route::get('/api/prayer-times', [PrayerController::class, 'getPrayerTimes']);
+Route::get('/api/qiblah', [PrayerController::class, 'getQiblahDirection']);
+Route::get('/api/nearby-mosques', [PrayerController::class, 'getNearbyMosques']);
+
+
 // Flights
 Route::get('/flights', [FlightController::class, 'index'])->name('flights.index');
 Route::post('/flights/search', [FlightController::class, 'search'])->name('flights.search');
 Route::get('/flights/book/{flight_id}', [FlightController::class, 'book'])->name('flights.book');
 Route::post('/flights/book/{flight_id}', [FlightController::class, 'book'])->name('flights.book.submit');
-Route::get('flights/confirmation', function () {
-    return view('pages.flights.confirmation');
-})->name('flights.confirmation');
+Route::get('flights/confirmation', function () {return view('pages.flights.confirmation');})->name('flights.confirmation');

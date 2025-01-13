@@ -11,26 +11,30 @@
         <div class="collapse navbar-collapse" id="navb">
             <ul class="navbar-nav ml-auto mr-3">
                 <li class="nav-item mx-md-2">
-                    <a href="" class="nav-link active">Home</a>
+                    <a href="" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item mx-md-2">
                     <a href="{{ route('destinations.index') }}" class="nav-link">Destinations</a>
                 </li>
 
                 <li class="nav-item mx-md-2">
-                    <a href="#" class="nav-link">Hotels</a>
+                    <a href="{{ route('hotels.index') }}" class="nav-link">Hotels</a>
                 </li>
 
                 <li class="nav-item mx-md-2">
+<<<<<<< HEAD
+                    <a href="{{ route('restaurant.index') }}" class="nav-link">Restaurants</a>
+=======
                     <a href="{{ route('restaurant.navRestaurant') }}" class="nav-link">Restaurants</a>
+>>>>>>> c49357de4de771faff05afe7535630b20f6c2025
                 </li>
 
                 <li class="nav-item mx-md-2">
-                    <a href="#" class="nav-link">Travel Package</a>
+                    <a href="{{ route('travel_packages.index') }}" class="nav-link">Travel Package</a>
                 </li>
 
                 <li class="nav-item mx-md-2">
-                    <a href="#" class="nav-link">Prayer Space</a>
+                    <a href="{{ route('prayer-space') }}" class="nav-link">Prayer Space</a>
                 </li>
             </ul>
 
