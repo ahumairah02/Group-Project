@@ -36,8 +36,12 @@ Route::get('/restaurants', [RestaurantController::class, 'index'])->name('restau
 Route::get('/restaurants/{destination_id}', [RestaurantController::class, 'byDestination'])->name('restaurants.byDestination');
 
 // Travel Packages
-Route::get('/travel-packages', [TravelPackageController::class, 'index'])->name('travel-packages.index');
-Route::get('/travel-packages/{destination_id}', [TravelPackageController::class, 'byDestination'])->name('travel-packages.byDestination');
+// Routes for Travel Packages
+Route::resource('travel_packages', TravelPackageController::class);
+
+// Additional route for filtering packages by destination
+Route::get('travel_packages/destination/{destination_id}', [TravelPackageController::class, 'byDestination'])
+    ->name('travel_packages.byDestination');
 
 // Bookings
 Route::get('/bookings', [BookingController::class, 'index'])->name('bookings');

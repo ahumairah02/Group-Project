@@ -26,7 +26,7 @@
                 </li>
 
                 <li class="nav-item mx-md-2">
-                    <a href="#" class="nav-link">Travel Package</a>
+                    <a href="{{ route('travel_packages.index') }}" class="nav-link">Travel Package</a>
                 </li>
 
                 <li class="nav-item mx-md-2">

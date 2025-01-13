@@ -9,7 +9,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // Call the DestinationSeeder to seed the destinations table
-        $this->call(DestinationSeeder::class);
+        $this->call([
+            DestinationSeeder::class,
+            TravelPackageSeeder::class,
+        ]);
     }
 }
 
