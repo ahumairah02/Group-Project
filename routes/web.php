@@ -32,9 +32,11 @@ Route::get('/hotels/{destination_id}', [HotelController::class, 'byDestination']
 
 // Restaurants
 Route::get('/restaurants', [RestaurantController::class, 'index'])->name('restaurant.index');
-Route::get('/restautants', [RestaurantController::class, 'navRestaurant'])->name('restaurant.navRestaurant');
-Route::get('/restaurant', [RestaurantController::class, 'show'])->name('restaurant.show');
-Route::get('/restaurants/{destination_id}', [RestaurantController::class, 'byDestination'])->name('restaurant.byDestination');
+Route::get('/restaurants/nav', [RestaurantController::class, 'navRestaurant'])->name('restaurant.navRestaurant');
+Route::get('/restaurants/{restaurant_id}', [RestaurantController::class, 'show'])->name('restaurant.show');
+Route::get('/restaurants/destination/{destination_id}', [RestaurantController::class, 'byDestination'])->name('restaurant.byDestination');
+Route::post('/restaurants/save', [RestaurantController::class, 'save'])->name('restaurant.save');
+Route::get('/restaurants/saved', [RestaurantController::class, 'saved'])->name('restaurant.saved');
 
 // Travel Packages
 Route::get('/travel-packages', [TravelPackageController::class, 'index'])->name('travel-packages.index');

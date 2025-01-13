@@ -16,9 +16,18 @@
                 <p><strong>Rating:</strong> {{ number_format($restaurant->rating, 1) }}/5.0</p>
             </div>
             <div class="col-md-4 text-end">
-                <button class="btn btn-outline-primary">
+                <!--<button class="btn btn-outline-primary">
                     <i class="bi bi-bookmark"></i> Save this Restaurant
-                </button>
+                </button>-->
+                <!-- Save Button -->
+                <form action="{{ route('restaurant.save') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="restaurant_id" value="{{ $restaurant->id }}">
+                    <button class="btn btn-outline-primary">
+                        <i class="bi bi-bookmark"></i> Save this Restaurant
+                    </button>
+                </form>
+
             </div>
         </div>
         <hr>
@@ -56,7 +65,7 @@
 
     <!-- Back Button -->
     <div class="mt-4">
-        <a href="{{ route('restaurants.index') }}" class="btn btn-secondary">Back to List</a>
+        <a href="{{ route('restaurant.index') }}" class="btn btn-secondary">Back to List</a>
     </div>
 </div>
 @endsection
