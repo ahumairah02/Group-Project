@@ -22,7 +22,7 @@
                 </li>
 
                 <li class="nav-item mx-md-2">
-                    <a href="#" class="nav-link">Restaurants</a>
+                    <a href="{{ route('restaurant.navRestaurant') }}" class="nav-link">Restaurants</a>
                 </li>
 
                 <li class="nav-item mx-md-2">
