@@ -11,7 +11,7 @@
         Destinations
     </h1>
     <p class="mt-3">
-        Home >> Destinations
+        Explore Top Halal-Friendly Places
     </p>
 </header>
 
