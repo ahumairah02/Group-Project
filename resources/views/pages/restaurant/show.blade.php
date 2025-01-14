@@ -8,6 +8,7 @@
     <h1 class="mb-3">{{ $restaurant->name }}</h1>
     <hr>
 
+<<<<<<< HEAD
     <!-- At a glance section -->
     <div class="row">
         <div class="col-md-8">
@@ -15,6 +16,30 @@
             <p><strong>Address:</strong> {{ $restaurant->address }}, {{ $restaurant->city }}, {{ $restaurant->country }}</p>
             <p><strong>Halal Certified:</strong> {{ $restaurant->halal_certified ? 'Yes' : 'No' }}</p>
             <p><strong>Rating:</strong> {{ number_format($restaurant->rating, 1) }}/5.0</p>
+=======
+        <!-- At a glance section -->
+        <div class="row">
+            <div class="col-md-8">
+                <h5>At a Glance</h5>
+                <p><strong>Address:</strong> {{ $restaurant->address }}, {{ $restaurant->city }}, {{ $restaurant->country }}</p>
+                <p><strong>Halal Certified:</strong> {{ $restaurant->halal_certified ? 'Yes' : 'No' }}</p>
+                <p><strong>Rating:</strong> {{ number_format($restaurant->rating, 1) }}/5.0</p>
+            </div>
+            <div class="col-md-4 text-end">
+                <!--<button class="btn btn-outline-primary">
+                    <i class="bi bi-bookmark"></i> Save this Restaurant
+                </button>-->
+                <!-- Save Button -->
+                <form action="{{ route('restaurant.save') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="restaurant_id" value="{{ $restaurant->id }}">
+                    <button class="btn btn-outline-primary">
+                        <i class="bi bi-bookmark"></i> Save this Restaurant
+                    </button>
+                </form>
+
+            </div>
+>>>>>>> 5ac2bd076242f31e88edecd2d2ab6d070532d2cc
         </div>
         <div class="col-md-4 text-end">
             <button class="btn btn-outline-primary">
@@ -55,7 +80,11 @@
 
     <!-- Back Button -->
     <div class="mt-4">
+<<<<<<< HEAD
         <a href="{{ route('home') }}" class="btn btn-secondary">Back to List</a>
+=======
+        <a href="{{ route('restaurant.index') }}" class="btn btn-secondary">Back to List</a>
+>>>>>>> 5ac2bd076242f31e88edecd2d2ab6d070532d2cc
     </div>
 </div>
 @endsection
