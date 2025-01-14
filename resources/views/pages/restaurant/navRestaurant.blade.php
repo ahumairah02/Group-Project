@@ -11,7 +11,7 @@
                             <p class="card-text">{{ $restaurant->address }}, {{ $restaurant->city }}, {{ $restaurant->country }}</p>
                             <p class="card-text">Halal Certified: {{ $restaurant->halal_certified ? 'Yes' : 'No' }}</p>
                             <p class="card-text">Rating: {{ $restaurant->rating ?? 'N/A' }}</p>
-                            <a href="{{ route('restaurant.show', ['restaurant_id' => $restaurant->id]) }}">View Restaurant</a>
+                            <a href="{{ route('restaurant.show', ['restaurant_id' => $restaurant->restaurant_id]) }}">View Restaurant</a>
                         </div>
                     </div>
                 </div>

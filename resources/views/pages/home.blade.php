@@ -15,7 +15,7 @@ Taqwa Travels
     <p class="mt-3">
         Halal Travel Made Easy
     </p>
-    <a href="#popular" class="btn btn-get-started px-4 mt-4">
+    <a href="{{ route('login') }}" class="btn btn-get-started px-4 mt-4">
         Get Started
     </a>
 </header>

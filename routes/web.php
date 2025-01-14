@@ -15,6 +15,9 @@ use App\Http\Controllers\PrayerController;
  // Add this line
 use App\Http\Controllers\FlightController;
 use App\Models\TravelPackage;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
+
+Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
 
 // Home Page
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -77,3 +80,13 @@ Route::post('/flights/search', [FlightController::class, 'search'])->name('fligh
 Route::get('/flights/book/{flight_id}', [FlightController::class, 'book'])->name('flights.book');
 Route::post('/flights/book/{flight_id}', [FlightController::class, 'book'])->name('flights.book.submit');
 Route::get('flights/confirmation', function () {return view('pages.flights.confirmation');})->name('flights.confirmation');
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});

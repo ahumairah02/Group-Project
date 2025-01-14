@@ -17,23 +17,24 @@ body {
   color: #071C4D;
 }
 
-.btn-navbar-right {
-  margin-top: -10px !important;
-  margin-bottom: -8px !important;
-  margin-right: -18px !important;
-  height: 70px;
-  border-radius: 0;
-}
-
 .btn-login {
-  background-color: #071C4D;
-  color: #ffffff;
-}
+    background-color: #071C4D;
+    color: #ffffff;
+    padding: 10px 20px; /* Adjust the padding to fit the text */
+    border: none; /* Remove border */
+    text-align: center; /* Ensure text is centered */
+    display: inline-block; /* Keep it inline */
+    font-size: 16px; /* Adjust font size if needed */
+    width: auto; /* Ensure width adjusts to content */
+    box-sizing: border-box; /* Prevent padding from expanding the button */
+    border-radius: 0; /* Normal rectangle */
+  }
 
-.btn-login:hover {
-  background-color: #2A53B4;
-  color: #ffffff;
-}
+  .btn-login:hover {
+    background-color: #2A53B4;
+    color: #ffffff;
+  }
+
 
 header {
   padding: 180px 0 165px;
@@ -571,5 +572,66 @@ header .btn-get-started:hover {
 .hover-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Center the login form container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7fafc; /* Light background color for the page */
+}
+
+/* Style for the login card */
+.login-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Set a maximum width */
+}
+
+/* Add some spacing to the form elements */
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+/* Style for the login heading */
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Ensure both inputs have the same padding and border */
+input {
+    padding: 1rem; /* consistent padding for both inputs */
+    border: 1px solid #ccc; /* consistent border style */
+    width: 100%; /* make sure inputs are full width */
+    border-radius: 4px; /* rounded corners */
+    box-sizing: border-box; /* include padding in width calculation */
+}
+
+input:focus {
+    outline: none;
+    border-color: #071C4D; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(76, 154, 255, 0.5);
+}
+
+/* Button styles */
+button {
+    background-color: #071C4D; /* Blue background */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3578e5; /* Darker blue on hover */
 }
 
