@@ -39,7 +39,7 @@
         <div class="col-md-4">
             <div class="card p-3 text-center">
                 <h5>Qiblah Finder - <span id="qiblah-direction">91°</span></h5>
-                <img src="/path/to/qiblah-icon.png" alt="Qiblah Finder" style="width: 80px;">
+                <img src="frontend/images/compass.png" alt="Qiblah Finder" style="width: 80px; display: block; margin: auto;">
             </div>
         </div>
 

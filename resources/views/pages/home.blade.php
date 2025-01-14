@@ -64,15 +64,7 @@ Taqwa Travels
                 @foreach($items as $item)
                     <div class="col-sm-6 col-md-4 col-lg-3">
                         <div class="card-travel text-center d-flex flex-column"
-                            style="background-image: url('{{ $item->galleries->count() ? Storage::url($item->galleries->first()->image) : '' }}');">
-                            <div class="travel-country">{{ $item->location }}</div>
-                            <div class="travel-location">{{ $item->title }}</div>
-                            <div class="travel-button mt-auto">
-                                <a href="{{ route('detail', $item->slug) }}"
-                                    class="btn btn-travel-details px-4">View Details</a>
-                            </div>
-                        </div>
-                    </div>
+                        style="background-image: url('{{ $item->description ? Storage::url($item->description) : 'header 2.jpg' }}');">
                 @endforeach
             </div>
         </div>
@@ -165,7 +157,7 @@ Taqwa Travels
                     <a href="#" class="btn btn-help px-4 mt-4 mx-1">
                         I Need Help
                     </a>
-                    <a href=" {{ route('bookings') }} " class="btn btn-get-started px-4 mt-4 mx-1">
+                    <a href=" {{ route('destinations.index') }} " class="btn btn-get-started px-4 mt-4 mx-1">
                         Get Started
                     </a>
                 </div>

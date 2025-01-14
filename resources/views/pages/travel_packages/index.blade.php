@@ -24,7 +24,7 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $package->name }}</td>
                         <td>{{ $package->destination->name }}</td>
-                        <td>${{ number_format($package->price, 2) }}</td>
+                        <td>RM{{ number_format($package->price, 2) }}</td>
                         <td>
                             <a href="{{ route('travel_packages.show', $package->package_id) }}" class="btn btn-info btn-sm">View</a>
                             <a href="{{ route('travel_packages.edit', $package->package_id) }}" class="btn btn-warning btn-sm">Edit</a>
