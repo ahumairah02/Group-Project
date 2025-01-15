@@ -140,7 +140,15 @@ e) **Login and User Management**
     
     Each destination has a **View Details** link that provides more information about the specific place.
 
-5. Flights
+5. Destinations Details
+
+   ![destinations4](https://github.com/ahumairah02/Group-Project/blob/142c800b911487373b10f1ce6d65de568dc76ded/images/destinations(3).png)
+   ![destinations5](https://github.com/ahumairah02/Group-Project/blob/142c800b911487373b10f1ce6d65de568dc76ded/images/destinations(4).png)
+
+   Clicking on **View Details** will display a **carousel of images** showcasing the selected destination. Users can also view information about the destination’s **hotels**,
+   **restaurants**, and **travel packages**. There is also a button to go back to all destinations for further exploration.
+
+7. Flights
 
    ![flights](https://github.com/ahumairah02/Group-Project/blob/d5b57cf115718994a8c1537b478b4359a6aa296d/images/flights.png)
 
@@ -151,7 +159,7 @@ e) **Login and User Management**
 
     Users can choose a flight from the list. Once they click on a specific flight, they will be redirected to the **Booking Flight Page** to proceed with their booking.
 
-6. Booking Flights
+8. Booking Flights
 
    ![flights-info](https://github.com/ahumairah02/Group-Project/blob/d5b57cf115718994a8c1537b478b4359a6aa296d/images/flights-info.png)
 
@@ -164,7 +172,7 @@ e) **Login and User Management**
 
     Once the required details are entered and the booking is confirmed, users will be directed to the **Confirmation Page** for final review and confirmation of their flight reservation.
 
-7. Confirmation
+9. Confirmation
 
    ![confirmation](https://github.com/ahumairah02/Group-Project/blob/d5b57cf115718994a8c1537b478b4359a6aa296d/images/confirmation.png)
 
