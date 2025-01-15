@@ -16,6 +16,10 @@ use App\Http\Controllers\PrayerController;
 use App\Http\Controllers\FlightController;
 use App\Models\TravelPackage;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\RegisteredUserController;
+
+// Registration Route
+Route::post('/register', [RegisteredUserController::class, 'store'])->name('register');
 
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
 
@@ -46,7 +50,7 @@ Route::get('/restaurants', [RestaurantController::class, 'index'])->name('restau
 Route::get('/restaurants/{restaurant_id}', [RestaurantController::class, 'show'])->name('restaurant.show');
 Route::get('/restaurants/destination/{destination_id}', [RestaurantController::class, 'byDestination'])->name('restaurant.byDestination');
 Route::post('/restaurants/save', [RestaurantController::class, 'save'])->name('restaurant.save');
-Route::get('/restaurants/saved', [RestaurantController::class, 'saved'])->name('restaurant.saved');
+Route::get('/restaurants/saved', [RestaurantController::class, 'saved'])->name('restaurant.save');
 
 
 

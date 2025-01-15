@@ -84,86 +84,28 @@
         } else {
             alert("Geolocation is not supported by this browser.");
         }
+    });
 
-        // Fetch Prayer Times
-        async function fetchPrayerTimes(lat, lon) {
-            try {
-                const response = await fetch(
-                    https://api.aladhan.com/v1/timings/16-01-2025?latitude=3.236497&longitude=101.710922&method=17&shafaq=general&tune=5%2C3%2C5%2C7%2C9%2C-1%2C0%2C8%2C-6&school=0&midnightMode=1&timezonestring=UTC&calendarMethod=UAQ
-                );
-                const data = await response.json();
-                console.log(data);
+    async function fetchPrayerTimes(lat, lng) {
+        const response = await fetch(`/api/prayer-times?lat=${lat}&lng=${lng}`);
+        const data = await response.json();
+        document.getElementById('prayer-times').innerHTML = data.html;
+    }
 
-                // Display prayer times
-                document.getElementById("fajr").textContent = data.data.timings.Fajr;
-                document.getElementById("dhuhr").textContent =
-                    data.data.timings.Dhuhr;
-                document.getElementById("asr").textContent = data.data.timings.Asr;
-                document.getElementById("maghrib").textContent =
-                    data.data.timings.Maghrib;
-                document.getElementById("isha").textContent = data.data.timings.Isha;
-            } catch (error) {
-                console.error("Error fetching prayer times:", error);
-            }
-        }
+    async function fetchQiblahDirection(lat, lng) {
+        const response = await fetch(`/api/qiblah?lat=${lat}&lng=${lng}`);
+        const data = await response.json();
+        document.getElementById('qiblah-direction').innerHTML = `Qiblah: ${data.direction}°`;
+    }
 
-        // Fetch Qibla Direction
-        async function fetchQibla(lat, lon) {
-            try {
-                const response = await fetch(https://api.aladhan.com/v1/qibla/${3.236497}/${101.710922});
-                const data = await response.json();
-                console.log(data);
-
-                const qiblaDirection = data.data.direction; // Qibla direction in degrees
-                document.getElementById("qibla").textContent = Qibla Direction: ${qiblaDirection.toFixed(2)}°;
-
-                // Update the Qibla compass dynamically using the device orientation API
-                if (window.DeviceOrientationEvent) {
-                    window.addEventListener("deviceorientation", (event) => {
-                        const compassHeading = event.alpha; // Device heading in degrees
-                        const adjustedDirection = (qiblaDirection - compassHeading + 360) % 360;
-
-                        const compassArrow = document.getElementById("qibla-compass-arrow");
-                        compassArrow.style.transform = translate(-50%, -50%) rotate(${adjustedDirection}deg);
-                    });
-                } else {
-                    alert("Your device does not support compass functionality.");
-                }
-            } catch (error) {
-                console.error("Error fetching Qibla direction:", error);
-            }
-        }
-
-
-        // Display mosques on Google Maps
-        function initMap(lat, lon) {
-            const userLocation = { lat: lat, lng: lon };
-            const map = new google.maps.Map(document.getElementById("map"), {
-                center: userLocation,
-                zoom: 15,
-            });
-
-            const service = new google.maps.places.PlacesService(map);
-            service.nearbySearch(
-                {
-                    location: userLocation,
-                    radius: 5000,
-                    keyword: "mosque",
-                },
-                (results, status) => {
-                    if (status === google.maps.places.PlacesServiceStatus.OK) {
-                        results.forEach((place) => {
-                            new google.maps.Marker({
-                                position: place.geometry.location,
-                                map: map,
-                                title: place.name,
-                            });
-                        });
-                    }
-                }
-            );
-        }
-    </script>
+    async function fetchNearbyMosques(lat, lng) {
+        const response = await fetch(`/api/nearby-mosques?lat=${lat}&lng=${lng}`);
+        const data = await response.json();
+        // Render the map dynamically
+        document.getElementById('mosque-map').src = data.mapUrl;
+    }
+</script>
 
 </body>
 @endsection
+

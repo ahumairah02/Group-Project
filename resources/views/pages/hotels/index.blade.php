@@ -32,6 +32,9 @@
             @endforelse
         </div>
 
+         <!-- Back Button -->
+         <a href="{{ url()->previous() }}" class="btn btn-secondary mt-4">Back</a>
+
     </div>
 </main>
 @endsection

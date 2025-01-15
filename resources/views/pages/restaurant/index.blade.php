@@ -14,7 +14,7 @@
 
             <div>
                 <!-- Button to Saved Restaurants -->
-                <a href="{{ route('restaurant.saved') }}" class="btn btn-primary mb-3">Saved Restaurants</a>
+                <a href="{{ route('restaurant.save') }}" class="btn btn-primary mb-3">Saved Restaurants</a>
                 <br>
                 <!-- Sort Dropdown -->
                 <form action="{{ route('restaurant.index') }}" method="GET" class="d-inline">
