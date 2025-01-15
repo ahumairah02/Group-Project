@@ -13,14 +13,17 @@ class TravelPackage extends Model
     protected $primaryKey = 'package_id';
 
     // Allow mass assignment for the specified fields
-    protected $fillable = [
+    /*protected $fillable = [
         'destination_id',
         'name',
         'description',
         'price',
         'duration', // Include 'duration' if it is part of the travel package
         'image',    // Include 'image' for storing the package's image path
-    ];
+    ];*/
+
+    protected $fillable = ['destination_id','name', 'description', 'price'];
+
 
     // Define the relationship with the Destination model
     public function destination()
@@ -51,5 +54,7 @@ class TravelPackage extends Model
     {
         return $query->where('destination_id', $destinationId);
     }
+
+
 
 }

@@ -12,7 +12,6 @@ use App\Http\Controllers\HomeController;
 use App\Models\Destination;
 use App\Models\Prayer;
 use App\Http\Controllers\PrayerController;
- // Add this line
 use App\Http\Controllers\FlightController;
 use App\Models\TravelPackage;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
@@ -39,7 +38,6 @@ Route::get('/hotels', [HotelController::class, 'index'])->name('hotels.index');
 Route::get('/hotels/{destination_id}', [HotelController::class, 'byDestination'])->name('hotels.byDestination');
 Route::get('/hotels/{id}', [HotelController::class, 'show'])->name('hotels.show');
 
-
 // Restaurants
 Route::get('/restaurants', [RestaurantController::class, 'index'])->name('restaurant.index');
 Route::get('/restaurants/nav', [RestaurantController::class, 'navRestaurant'])->name('restaurant.navRestaurant');
@@ -48,17 +46,18 @@ Route::get('/restaurants/destination/{destination_id}', [RestaurantController::c
 Route::post('/restaurants/save', [RestaurantController::class, 'save'])->name('restaurant.save');
 Route::get('/restaurants/saved', [RestaurantController::class, 'saved'])->name('restaurant.saved');
 
-
-
 // Travel Packages
-Route::get('/travel_packages', [TravelPackageController::class, 'index'])->name('travel_packages.index');
+//Route::get('/travel_packages', [TravelPackageController::class, 'index'])->name('travel_packages.index');
 Route::resource('travel_packages', TravelPackageController::class);
-Route::get('/travel_packages/{destination_id}', [TravelPackageController::class, 'byDestination'])->name('travel_packages.byDestination');
+
 
 // Additional route for filtering packages by destination
-Route::get('travel_packages/destination/{destination_id}', [TravelPackageController::class, 'byDestination'])
+Route::get('/travel_packages/destination/{destination_id}', [TravelPackageController::class, 'byDestination'])
     ->name('travel_packages.byDestination');
 
+// Bulk Delete Route
+Route::delete('/travel_packages/bulk-delete', [TravelPackageController::class, 'bulkDelete'])
+    ->name('travel_packages.bulk_delete');
 
 // Bookings
 Route::get('/bookings', [BookingController::class, 'index'])->name('bookings');
@@ -73,13 +72,14 @@ Route::get('/api/prayer-times', [PrayerController::class, 'getPrayerTimes']);
 Route::get('/api/qiblah', [PrayerController::class, 'getQiblahDirection']);
 Route::get('/api/nearby-mosques', [PrayerController::class, 'getNearbyMosques']);
 
-
 // Flights
 Route::get('/flights', [FlightController::class, 'index'])->name('flights.index');
 Route::post('/flights/search', [FlightController::class, 'search'])->name('flights.search');
 Route::get('/flights/book/{flight_id}', [FlightController::class, 'book'])->name('flights.book');
 Route::post('/flights/book/{flight_id}', [FlightController::class, 'book'])->name('flights.book.submit');
-Route::get('flights/confirmation', function () {return view('pages.flights.confirmation');})->name('flights.confirmation');
+Route::get('flights/confirmation', function () {
+    return view('pages.flights.confirmation');
+})->name('flights.confirmation');
 
 Route::middleware([
     'auth:sanctum',

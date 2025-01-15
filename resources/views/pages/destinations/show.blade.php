@@ -62,8 +62,10 @@
                 <img src="{{ asset('frontend/images/travel.jpg') }}" alt="Travel Package" class="card-img-top" style="height: 200px; object-fit: cover;">
                 <div class="card-body">
                     <h5 class="card-title">Travel Packages</h5>
-                    <p class="card-text">Check out the best travel packages for {{ $destination->name }}.</p>
-                    <a href="{{ route('travel_packages.index', ['destination_id' => $destination->destination_id]) }}" class="btn btn-primary">View Travel Packages</a>
+                   <!-- <p class="card-text">Check out the best travel packages for {{ $destination->name }}.</p>
+                    <a href="{{ route('travel_packages.index', ['destination_id' => $destination->destination_id]) }}" class="btn btn-primary">View Travel Packages</a> -->
+                    <p class="card-text">Check out the best travel packages .</p>
+                    <a href="{{ route('travel_packages.index')}}" class="btn btn-primary">View Travel Packages</a>
                 </div>
             </div>
         </div>

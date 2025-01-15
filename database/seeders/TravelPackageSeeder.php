@@ -17,8 +17,8 @@ class TravelPackageSeeder extends Seeder
         DB::table('travel_packages')->insert([
             [
                 'destination_id' => 1, // Assuming Bosnia has destination_id = 1
-                'name' => 'Discover Bosnia',
-                'description' => 'Explore the rich culture and stunning landscapes of Bosnia with this 5-day travel package.',
+                'name' => 'Discover Istanbul',
+                'description' => 'Explore the rich culture and stunning landscapes of Istanbul with this 5-day travel package.',
                 'price' => 1000.00,
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -33,20 +33,13 @@ class TravelPackageSeeder extends Seeder
             ],
             [
                 'destination_id' => 3, // Assuming Singapore has destination_id = 3
-                'name' => 'Singapore Highlights',
-                'description' => 'A 3-day tour of Singapore featuring the Marina Bay Sands, Gardens by the Bay, and local culinary experiences.',
+                'name' => 'Marrakech Highlights',
+                'description' => 'A 3-day tour of Marrakech featuring local culinary experiences.',
                 'price' => 1500.00,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            [
-                'destination_id' => 4, // Assuming Georgia has destination_id = 4
-                'name' => 'Enchanting Georgia',
-                'description' => 'Discover the charm of Georgia with this 6-day travel package, including Tbilisi city tours and wine-tasting experiences.',
-                'price' => 1400.00,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
+
         ]);
     }
 }

@@ -12,18 +12,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('travel_packages', function (Blueprint $table) {
-        $table->engine = 'InnoDB';
-        $table->id('package_id');
-        $table->unsignedBigInteger('destination_id'); // Ensure it's unsigned big integer
-            $table->foreign('destination_id')
-            ->references('destination_id')
-            ->on('destinations')
-            ->onDelete('cascade');
-        $table->string('name');
-        $table->text('description')->nullable();
-        $table->decimal('price', 8, 2);
-        $table->timestamps();
+            $table->id();
+            $table->unsignedBigInteger('destination_id'); // Foreign key
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->decimal('price', 10, 2);
+            $table->timestamps();
+
+            $table->foreign('destination_id')->references('id')->on('destinations')->onDelete('cascade');
         });
+
     }
 
 
