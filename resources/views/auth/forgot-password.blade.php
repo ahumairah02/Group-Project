@@ -23,12 +23,12 @@
                 <div class="mb-4">
                     <label for="email" class="block text-sm font-medium text-gray-600">{{ __('Email') }}</label>
                     <input id="email" type="email" name="email" required autofocus
-                           class="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" value="{{ old('email') }}">
+                           class="forgot-input" value="{{ old('email') }}">
                 </div>
 
                 <div class="flex items-center justify-end mt-4">
                     <button type="submit"
-                            class="bg-indigo-600 text-white py-2 px-6 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            class="forgot-button">
                         {{ __('Email Password Reset Link') }}
                     </button>
                 </div>
