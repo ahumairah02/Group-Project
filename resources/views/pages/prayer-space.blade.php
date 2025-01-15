@@ -1,77 +1,84 @@
 @extends('layouts.app')
-<head>
-    <link rel="stylesheet" href="{{ asset('C:\xampp\htdocs\Group-Project\resources\css\app.css') }}">
-</head>
+
+@section('title','prayer-space')
 
 @section('content')
-<div class="container my-5">
+
+
+<div class="container my-4">
 
     <div class="container">
         <div id="prayer-times" class="card"></div>
-        <div id="qiblah-direction" class="card"></div>
-        <iframe id="mosque-map" src="" width="100%" height="300px" frameborder="0" allowfullscreen></iframe>
-    </div>
 
-    <!-- Top Navigation -->
-    <div class="row mb-4">
-        <div class="col text-center">
-            <h1>Prayer Space</h1>
+<head>
+    <title>Prayer Space</title>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-bhE4I0DztxxytLEdJO2JNWsLL8NS4l8&libraries=places"></script>
+</head>
+<body>
+    <h1>Prayer Space</h1>
+    <div id="prayer-times" class="card"></div>
+            <h2>Prayer Times</h2>
+            <ul>
+                <li>Fajr: <span id="fajr"></span></li>
+                <li>Dhuhr: <span id="dhuhr"></span></li>
+                <li>Asr: <span id="asr"></span></li>
+                <li>Maghrib: <span id="maghrib"></span></li>
+                <li>Isha: <span id="isha"></span></li>
+            </ul>
+        </div>
+
+
+    <div id="qibla-finder">
+        <h2>Qibla Finder</h2>
+        <p id="qibla">Qibla Direction: Loading...</p>
+        <div id="qibla-compass" style="position: relative; width: 150px; height: 150px; margin: auto;">
+            <img
+                src="frontend/images/compass bg.jpeg"
+                alt="Compass background"
+                style="width: 100%; height: 100%; position: absolute; z-index: 1;"
+            />
+            <img
+                id="qibla-compass-arrow"
+                src="frontend/images/arrow.jpeg"
+                alt="Compass arrow"
+                style="width: 50px; height: 50px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(0deg); z-index: 2;"
+            />
         </div>
     </div>
 
-    <!-- Prayer Time Section -->
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card p-3">
-                <h5 class="mb-3">Prayer Time - {{ now()->format('D, d M Y') }}</h5>
-                <ul class="list-unstyled">
-                    <li>Fajr: <span id="fajr-time">06:55</span></li>
-                    <li>Sunrise: <span id="sunrise-time">08:24</span></li>
-                    <li>Dhuhur: <span id="dhuhur-time">13:36</span></li>
-                    <li class="bg-warning p-2">Asr: <span id="asr-time">16:17</span></li>
-                    <li>Maghrib: <span id="maghrib-time">18:41</span></li>
-                    <li>Isha’a: <span id="isha-time">19:57</span></li>
-                </ul>
-            </div>
-        </div>
 
-        <!-- Qiblah Finder Section -->
-        <div class="col-md-4">
-            <div class="card p-3 text-center">
-                <h5>Qiblah Finder - <span id="qiblah-direction">91°</span></h5>
-                <img src="frontend/images/compass.png" alt="Qiblah Finder" style="width: 80px; display: block; margin: auto;">
-            </div>
-        </div>
+    <!-- map -->
+    <h2>Nearby Mosque</h2>
+    <div id="map"
+     style="width: 100%; height: 400px;"></div>
 
-        <!-- Include JavaScript Libraries -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY"></script>
+    <!-- Back Button -->
+    <a href="{{ url()->previous() }}" class="btn btn-secondary mt-4">Back</a>
 
-        <!-- Mosque Finder Map -->
-        <div class="col-md-4">
-            <div class="card p-3">
-                <h5>Mosque nearby: <span id="mosque-location">Marrakech, Morocco</span></h5>
-                <div id="mosque-map" style="height: 250px;"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
+    <script>
+        // Check if Geolocation is available
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
                 (position) => {
-                    const latitude = position.coords.latitude;
-                    const longitude = position.coords.longitude;
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
 
-                    // Send location to Laravel
-                    fetchPrayerTimes(latitude, longitude);
-                    fetchQiblahDirection(latitude, longitude);
-                    fetchNearbyMosques(latitude, longitude);
+                    // Log user's location
+                    console.log("Latitude: " + lat + ", Longitude: " + lon);
+
+                    // Fetch prayer times
+                    fetchPrayerTimes(lat, lon);
+
+                    // Fetch Qibla direction
+                    fetchQibla(lat, lon);
+
+                    // Initialize the map with mosques
+                    initMap(lat, lon);
                 },
                 (error) => {
-                    alert("Unable to retrieve location. Please enable location services.");
+                    console.error("Error fetching location:", error);
+                    alert("Unable to fetch your location.");
                 }
             );
         } else {
@@ -99,4 +106,6 @@
     }
 </script>
 
+</body>
 @endsection
+

@@ -8,24 +8,25 @@ use Illuminate\Support\Facades\Session;
 
 class RestaurantController extends Controller
 {
-    public function index(Request $request)
-    {
-        // Get the destination ID from the query string
-        $destination_id = $request->query('destination_id');
 
-        // Retrieve restaurants based on the destination ID
-        if ($destination_id) {
-            // Fetch restaurants for the given destination
-            $restaurants = Restaurant::where('destination_id', $destination_id)->paginate(10);
-            // Retrieve the destination name
-            $destination = Destination::find($destination_id);
-            return view('pages.restaurant.index', compact('restaurants', 'destination'));
-        } else {
-            // If no destination_id, show all restaurants (with pagination)
-            $restaurants = Restaurant::paginate(10);
-            return view('pages.restaurant.index', compact('restaurants'));
+    public function index(Request $request)
+{
+    $destination_id = $request->query('destination_id');
+    $destination = null;
+
+    if ($destination_id) {
+        $destination = Destination::find($destination_id);
+        if (!$destination) {
+            return redirect()->route('destinations.index')->with('error', 'Destination not found.');
+
         }
+        $restaurants = Restaurant::where('destination_id', $destination_id)->get();
+    } else {
+        $restaurants = Restaurant::all();
     }
+
+    return view('pages.restaurant.index', compact('restaurants', 'destination'));
+}
 
     public function navRestaurant()
     {
@@ -47,6 +48,7 @@ class RestaurantController extends Controller
 
     public function show($restaurant_id)
     {
+
         // Retrieve the restaurant by ID
         $restaurant = Restaurant::findOrFail($restaurant_id);
         return view('pages.restaurant.show', compact('restaurant'));

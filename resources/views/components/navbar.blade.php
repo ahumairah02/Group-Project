@@ -20,7 +20,7 @@
                     <a href="{{ route('hotels.index') }}" class="nav-link">Hotels</a>
                 </li>
                 <li class="nav-item mx-md-2">
-                    <a href="{{ route('restaurant.navRestaurant') }}" class="nav-link">Restaurants</a>
+                    <a href="{{ route('restaurant.index') }}" class="nav-link">Restaurants</a>
                 </li>
                 <li class="nav-item mx-md-2">
                     <a href="{{ route('travel_packages.index') }}" class="nav-link">Travel Package</a>
