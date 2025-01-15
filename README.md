@@ -180,6 +180,25 @@ e) **Login and User Management**
    **confirmation email** will be sent shortly with all relevant booking information.
 
 10. Hotel
+    
+    ![hotel](https://github.com/ahumairah02/Group-Project/blob/333945ee630fd5041f00a04fe37979a2a010673d/images/hotel%20page.jpeg)
+    
+    ![hotel booking](https://github.com/ahumairah02/Group-Project/blob/333945ee630fd5041f00a04fe37979a2a010673d/images/booking.com%20page.png)
+
+11. Restaurant
+
+     ![Restaurant](https://github.com/ahumairah02/Group-Project/blob/333945ee630fd5041f00a04fe37979a2a010673d/images/restaurant%20page.jpeg)
+
+    ![Restaurant details](https://github.com/ahumairah02/Group-Project/blob/333945ee630fd5041f00a04fe37979a2a010673d/images/restaurant%20detail.jpeg)
+
+12. Travel Package
+
+    ![Travel package](https://github.com/ahumairah02/Group-Project/blob/333945ee630fd5041f00a04fe37979a2a010673d/images/travelPackage.jpeg)
+
+    ![add Travel package](https://github.com/ahumairah02/Group-Project/blob/333945ee630fd5041f00a04fe37979a2a010673d/images/addPackage.jpeg)
+
+    ![edit Travel package](https://github.com/ahumairah02/Group-Project/blob/333945ee630fd5041f00a04fe37979a2a010673d/images/editPackage.jpeg)
+
 
     
 
