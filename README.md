@@ -88,7 +88,7 @@ e) **Login and User Management**
 
 2. Login
 
-    ![login](https://github.com/ahumairah02/Group-Project/blob/eeebc83ac25143410de5ae05ccddc1031057d868/images/homepage.png)
+    ![login](https://github.com/ahumairah02/Group-Project/blob/156746d9f547a384f684ac6dac5cde02ae6e042a/images/login.png)
 
    The login page allows users to access their accounts by entering their **email** and **password**. It includes:
 
