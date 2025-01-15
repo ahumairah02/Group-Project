@@ -78,6 +78,16 @@ e) **Login and User Management**
 ### Mock Up
 [View the Mock-Up on Canva](https://www.canva.com/design/DAGZthEtXYk/v3tOHtIv05zn2EpcwOnXLQ/edit)
 
+### Screenshots with description
+
+1. Homepage
+   ![Alt Text](public/frontend/images/homepage.png)
+
+3. 
+
+
+### Challenges & Difficulties to Develop The Application
+
 ### References
 
 1. GitHub Docs: Markdown Syntax Guide - [https://docs.github.com/en/get-started/writing-on-github/basic-writing-and-formatting-syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
