@@ -2,10 +2,10 @@
 ### Group F Members
 |     NAME      |   MATRIC NO.   |     TASK      | 
 | ------------- | ------------- | ------------- |
-|1. Maria Wardah binti Mohd Ghazali | 2218014 | Objectives |
-|2. Amir Mustaqim Bin Ismail  | 2218607 |  Features & Functionalities  |
+|1. Maria Wardah binti Mohd Ghazali | 2218014 | Objectives, Travel Package |
+|2. Amir Mustaqim Bin Ismail  | 2218607 |  Features & Functionalities, Hotel  |
 |3. Aisha Humairah binti Ahmad Adzuan  | 2219130  |  ERD, Login, Destinations & Flights Module   |
-|4. Siti Hajar 'Aainaa binti Hamid | 2218648  |    Title & Introduction    |
+|4. Siti Hajar 'Aainaa binti Hamid | 2218648  |    Title & Introduction, Restaurant |
 |5. Musanna Sarder Abdullah          | 2220429  |   Sequence Diagram        
 
 ### Title
@@ -178,6 +178,10 @@ e) **Login and User Management**
 
    The confirmation page ensures that the user’s booking has been successfully confirmed. It includes a message confirming the reservation details and notifies the user that a
    **confirmation email** will be sent shortly with all relevant booking information.
+
+10. Hotel
+
+    
 
 ### Challenges & Difficulties to Develop The Application
 
