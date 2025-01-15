@@ -81,7 +81,14 @@ e) **Login and User Management**
 ### Screenshots with description
 
 1. Homepage
+   
    ![homepage](https://github.com/ahumairah02/Group-Project/blob/eeebc83ac25143410de5ae05ccddc1031057d868/images/homepage.png) 
+    This is the homepage of our website, **Taqwa Travels**. It includes six navigation options: Home, Destinations, Hotels, Restaurants, Travel Packages, and Prayer Spaces. The **Get        Started** button leads to the login page. Users can also log in or log out from the navigation bar.
+
+2. Login
+
+    ![login](https://github.com/ahumairah02/Group-Project/blob/eeebc83ac25143410de5ae05ccddc1031057d868/images/homepage.png) 
+3. 
 
 
 ### Challenges & Difficulties to Develop The Application
