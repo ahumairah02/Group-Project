@@ -16,6 +16,10 @@ use App\Http\Controllers\PrayerController;
 use App\Http\Controllers\FlightController;
 use App\Models\TravelPackage;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\RegisteredUserController;
+
+// Registration Route
+Route::post('/register', [RegisteredUserController::class, 'store'])->name('register');
 
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
 
