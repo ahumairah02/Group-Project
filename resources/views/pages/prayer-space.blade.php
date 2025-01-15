@@ -49,7 +49,9 @@
 
 
     <!-- map -->
-    <div id="map" style="width: 100%; height: 400px;"></div>
+    <h2>Nearby Mosque</h2>
+    <div id="map"
+     style="width: 100%; height: 400px;"></div>
 
     <!-- Back Button -->
     <a href="{{ url()->previous() }}" class="btn btn-secondary mt-4">Back</a>
