@@ -81,9 +81,7 @@ e) **Login and User Management**
 ### Screenshots with description
 
 1. Homepage
-   ![Alt Text](public/frontend/images/homepage.png)
-
-3. 
+   ![homepage](https://github.com/ahumairah02/Group-Project/blob/eeebc83ac25143410de5ae05ccddc1031057d868/images/homepage.png) 
 
 
 ### Challenges & Difficulties to Develop The Application
