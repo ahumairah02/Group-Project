@@ -199,6 +199,9 @@ e) **Login and User Management**
 
     ![edit Travel package](https://github.com/ahumairah02/Group-Project/blob/333945ee630fd5041f00a04fe37979a2a010673d/images/editPackage.jpeg)
 
+13. Prayer Space
+    ![Prayer Space](https://github.com/ahumairah02/Group-Project/blob/65cfeee25206e9b319dea16fc6f699868ec7b74e/images/PrayerSpace.jpeg)
+
 
     
 
