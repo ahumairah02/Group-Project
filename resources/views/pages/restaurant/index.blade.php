@@ -5,7 +5,31 @@
 @section('content')
 <main>
     <div class="container my-4">
-        <h1 class="mb-4">Restaurants in {{ $destination->name ?? 'Selected Location' }}</h1>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            @if($destination)
+                <h1 class="mb-4">Restaurant in {{ $destination->name }}</h1>
+            @else
+                <h1 class="mb-4">Restaurant</h1>
+            @endif
+
+            <div>
+                <!-- Button to Saved Restaurants -->
+                <a href="{{ route('restaurant.saved') }}" class="btn btn-primary mb-3">Saved Restaurants</a>
+                <br>
+                <!-- Sort Dropdown -->
+                <form action="{{ route('restaurant.index') }}" method="GET" class="d-inline">
+                    @if($destination)
+                        <input type="hidden" name="destination_id" value="{{ $destination->id }}">
+                    @endif
+                    <select name="sort_by" class="form-select d-inline w-auto" onchange="this.form.submit()">
+                        <option value="" disabled selected>Sort By</option>
+                        <option value="rating" {{ request('sort_by') === 'rating' ? 'selected' : '' }}>Rating</option>
+                        <option value="halal_certified" {{ request('sort_by') === 'halal_certified' ? 'selected' : '' }}>Halal Certified</option>
+                    </select>
+                </form>
+
+            </div>
+        </div>
 
         <div class="row">
             @foreach ($restaurants as $restaurant)
@@ -28,23 +52,4 @@
         <a href="{{ url()->previous() }}" class="btn btn-secondary mt-4">Back</a>
     </div>
 </main>
-
 @endsection
-
-@push('prepend-style')
-    <link rel="stylesheet" href="{{ url('frontend/libraries/xzoom/xzoom.css') }}">
-@endpush
-
-@push('addon-script')
-    <script src="{{ url('frontend/libraries/xzoom/xzoom.min.js') }}"></script>
-    <script>
-        $(document).ready(function () {
-            $('.xzoom, .xzoom-gallery').xzoom({
-                zoomWidth: 500,
-                title: false,
-                tint: '#333',
-                xoffset: 15
-            });
-        });
-    </script>
-@endpush

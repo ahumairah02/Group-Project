@@ -42,7 +42,7 @@ Route::get('/hotels/{id}', [HotelController::class, 'show'])->name('hotels.show'
 
 // Restaurants
 Route::get('/restaurants', [RestaurantController::class, 'index'])->name('restaurant.index');
-Route::get('/restaurants/nav', [RestaurantController::class, 'navRestaurant'])->name('restaurant.navRestaurant');
+//Route::get('/restaurants/nav', [RestaurantController::class, 'navRestaurant'])->name('restaurant.navRestaurant');
 Route::get('/restaurants/{restaurant_id}', [RestaurantController::class, 'show'])->name('restaurant.show');
 Route::get('/restaurants/destination/{destination_id}', [RestaurantController::class, 'byDestination'])->name('restaurant.byDestination');
 Route::post('/restaurants/save', [RestaurantController::class, 'save'])->name('restaurant.save');
