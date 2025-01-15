@@ -82,16 +82,98 @@ e) **Login and User Management**
 
 1. Homepage
    
-   ![homepage](https://github.com/ahumairah02/Group-Project/blob/eeebc83ac25143410de5ae05ccddc1031057d868/images/homepage.png) 
+   ![homepage](https://github.com/ahumairah02/Group-Project/blob/eeebc83ac25143410de5ae05ccddc1031057d868/images/homepage.png)
+   
     This is the homepage of our website, **Taqwa Travels**. It includes six navigation options: Home, Destinations, Hotels, Restaurants, Travel Packages, and Prayer Spaces. The **Get        Started** button leads to the login page. Users can also log in or log out from the navigation bar.
 
 2. Login
 
-    ![login](https://github.com/ahumairah02/Group-Project/blob/eeebc83ac25143410de5ae05ccddc1031057d868/images/homepage.png) 
-3. 
+    ![login](https://github.com/ahumairah02/Group-Project/blob/eeebc83ac25143410de5ae05ccddc1031057d868/images/homepage.png)
 
+   The login page allows users to access their accounts by entering their **email** and **password**. It includes:
+
+    - A **"Remember Me"** checkbox for easier future logins.
+    - A **"Forgot Password"** link to reset the password if needed.
+    - A **Login** button that redirects users to the homepage upon successful authentication.
+    - A **"Register"** link for users who don’t have an account, allowing them to create a new one.
+      
+3. Register
+
+   ![register](https://github.com/ahumairah02/Group-Project/blob/d5b57cf115718994a8c1537b478b4359a6aa296d/images/register.png)
+
+   The registration page allows new users to create an account by filling in the following details:
+
+    - **Name**
+    - **Email**
+    - **Password**
+    - **Confirm Password**
+
+    It includes:
+
+    - A **Register** button that redirects users to the homepage upon successful registration.
+    - A **"Already Registered?"** link that directs users to the login page if they already have an account.
+
+4. Destinations
+
+    ![destinations](https://github.com/ahumairah02/Group-Project/blob/d5b57cf115718994a8c1537b478b4359a6aa296d/images/destinations.png)
+    ![destinations2](https://github.com/ahumairah02/Group-Project/blob/d5b57cf115718994a8c1537b478b4359a6aa296d/images/destinations(1).png)
+    ![destinations3](https://github.com/ahumairah02/Group-Project/blob/d5b57cf115718994a8c1537b478b4359a6aa296d/images/destinations(2).png) 
+
+    The destinations page allows users to search for their ideal travel plans with a **Choose Destination** form. The form includes:
+
+    - **Select Destination**: Choose the desired travel location.
+    - **Departure Date**: Pick a start date for the journey.
+    - **Return Date**: Select the date to return.
+    - **Travellers (Quantity)**: Specify the number of travelers.
+    - **Cabin Class**: Choose between First Class, Business Class, or Economy.
+
+    Additionally, the page ensures Shariah compliance with options to select:
+    - **Muslim-Friendly Attractions**
+    - **Halal Amenities**
+  
+   Once the form is filled and the **Search** button is clicked, users are directed to the **Flight Page**.
+
+    Below the page, users will find **Suggested Destinations**, which include:
+    - **Istanbul**
+    - **Kuala Lumpur**
+    - **Marrakech**
+    Each destination has a **View Details** link that provides more information about the specific place.
+
+5. Flights
+
+   ![flights](https://github.com/ahumairah02/Group-Project/blob/d5b57cf115718994a8c1537b478b4359a6aa296d/images/flights.png)
+
+    The flight page displays the available flights for the selected destination. It includes a list of flights with the following details:
+
+    - **Flight Number**
+    - **Price**
+
+    Users can choose a flight from the list. Once they click on a specific flight, they will be redirected to the **Booking Flight Page** to proceed with their booking.
+
+6. Booking Flights
+
+   ![flights-info](https://github.com/ahumairah02/Group-Project/blob/d5b57cf115718994a8c1537b478b4359a6aa296d/images/flights-info.png)
+
+   The booking flight page requires users to fill in the following information to complete their booking:
+
+    - **Full Name**
+    - **Email Address**
+    - **Phone Number**
+    - **Payment Information**
+
+    Once the required details are entered and the booking is confirmed, users will be directed to the **Confirmation Page** for final review and confirmation of their flight reservation.
+
+7. Confirmation
+
+   ![confirmation](https://github.com/ahumairah02/Group-Project/blob/d5b57cf115718994a8c1537b478b4359a6aa296d/images/confirmation.png)
+
+   The confirmation page ensures that the user’s booking has been successfully confirmed. It includes a message confirming the reservation details and notifies the user that a
+   **confirmation email** will be sent shortly with all relevant booking information.
 
 ### Challenges & Difficulties to Develop The Application
+
+- **Time Constraints**: The project had a short time frame for completion, which made it challenging to implement and test all features thoroughly.
+- **GitHub Usage**: Some team members faced difficulties with **GitHub**, especially when it came to **pulling** or **pushing** changes, as they were not accustomed to using version control systems.
 
 ### References
 
