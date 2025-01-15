@@ -195,11 +195,29 @@ e) **Login and User Management**
 
     ![Travel package](https://github.com/ahumairah02/Group-Project/blob/333945ee630fd5041f00a04fe37979a2a010673d/images/travelPackage.jpeg)
 
+    This section allows **administrators** to manage travel packages offered by the **Taqwa Travel**. Admins can **create new packages, view existing ones, edit details**, and **delete packages** as needed.
+
     ![add Travel package](https://github.com/ahumairah02/Group-Project/blob/333945ee630fd5041f00a04fe37979a2a010673d/images/addPackage.jpeg)
+    
+    This section is where admins **create new travel packages** for the **Taqwa Travel**.
+
+    **How it works:**
+    
+    1. Select Destination: Choose the **travel destination** from the dropdown.
+    2. Enter Details: Fill in the **Package Name, Description**, and **Price**.
+    3. Save Package: Click **"Add Package"** to create the new package.
 
     ![edit Travel package](https://github.com/ahumairah02/Group-Project/blob/333945ee630fd5041f00a04fe37979a2a010673d/images/editPackage.jpeg)
 
-13. Prayer Space
+    This section allows **admins** to **update travel package** details.
+
+    **How it works**:
+    
+    Select Package: Choose the **package** to edit.
+    Modify Details: Change the **Destination, Name, Description**, or **Price**.
+    Save Changes: Click **"Update Package"** to save the changes.
+
+14. Prayer Space
     ![Prayer Space](https://github.com/ahumairah02/Group-Project/blob/65cfeee25206e9b319dea16fc6f699868ec7b74e/images/PrayerSpace.jpeg)
 
 
