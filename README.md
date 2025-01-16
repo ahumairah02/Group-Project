@@ -179,17 +179,59 @@ e) **Login and User Management**
    The confirmation page ensures that the user’s booking has been successfully confirmed. It includes a message confirming the reservation details and notifies the user that a
    **confirmation email** will be sent shortly with all relevant booking information.
 
+
+
 10. Hotel
     
     ![hotel](https://github.com/ahumairah02/Group-Project/blob/333945ee630fd5041f00a04fe37979a2a010673d/images/hotel%20page.jpeg)
     
+    
+    This page is shown when the user clicks "hotel" in the navigation bar. The system retrieves and lists all suggested hotels stored in the database. Each hotel card             includes the name, address, halal certification status, rating, and along with a button to book via an external platform like Booking.com..
+    
+    ![hotel_dest](https://github.com/ahumairah02/Group-Project/blob/a26edb043265b81b13d74da544777cbbd179ffee/images/hotel_dest.png)
+    
+    
+    This page is displayed when the user selects "Hotels" from the destination page and filters results based on a specific destination (e.g., Kuala Lumpur). The system retrieves and        shows suggested hotels based on the chosen destination. Each hotel card provides the name, address, halal certification status, and rating, along with a button to book via an            external platform like Booking.com.
+    
     ![hotel booking](https://github.com/ahumairah02/Group-Project/blob/333945ee630fd5041f00a04fe37979a2a010673d/images/booking.com%20page.png)
 
-11. Restaurant
+    
+    When user click **book via Booking.com**,it will redirect to the Booking.com page.
+    
+    
 
+12. Restaurant
+     **Restaurant in Navigation Bar**
      ![Restaurant](https://github.com/ahumairah02/Group-Project/blob/333945ee630fd5041f00a04fe37979a2a010673d/images/restaurant%20page.jpeg)
 
+    
+    This page is shown when the user clicks "Restaurants" in the navigation bar. The system retrieves and lists all suggested restaurants stored in the database. Each restaurant card        includes the name, address, halal certification status, rating, and a button to view more details.
+
+    - **Saved Restaurants** button : allows users to access their saved or favorite restaurants.
+    - **Sort By** dropdown         : allow users to sort the restaurant base on their preference (Rating and halal status)
+
+    **Restaurant by destinantion**
+    ![Restaurant_dest](https://github.com/ahumairah02/Group-Project/blob/8099f4ab7029958b93db23596fa3f6f9a17918d9/images/restaurant_dest.png)
+
+    
+    This page is displayed when the user selects "Retaurants" from the destination page and filters results based on a specific destination (e.g., Kuala Lumpur). The system retrieves 
+    and shows suggested restaurants based on the chosen destination. Each restaurant card provides the name, address, halal certification status, and rating. 
+
+     **View restaurant detais**
     ![Restaurant details](https://github.com/ahumairah02/Group-Project/blob/333945ee630fd5041f00a04fe37979a2a010673d/images/restaurant%20detail.jpeg)
+
+    
+   **Description for the image:**  
+    When the user clicks the "View Details" button on a restaurant card, they are redirected to the restaurant's description page. This page provides detailed information about the     
+    selected restaurant, including:  
+
+    - The name of the restaurant displayed at the top.  
+    - A cover image showcasing the restaurant's ambiance.  
+    - Key details "At a Glance," such as the address, halal certification status, contact information, and a link to the restaurant's website.  
+    - An "About" section .  
+    - Business hours displayed in a table format for each day of the week.  
+
+    The page also includes a "Save this restaurant" button for users to bookmark the restaurant and a "Back to List" button to navigate back to the main restaurant listing page.
 
 12. Travel Package
 
