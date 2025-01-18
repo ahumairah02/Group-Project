@@ -264,6 +264,7 @@ e) **Login and User Management**
 
 
     
+15.Payment page : ![Screenshot 2025-01-18 141007](https://github.com/user-attachments/assets/4a8abfa3-8bbb-475d-9508-0651edaa2a87)
 
 ### Challenges & Difficulties to Develop The Application
 
